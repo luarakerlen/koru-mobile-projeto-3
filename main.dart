@@ -1,5 +1,4 @@
 // Importações dos arquivos que serão utilizados
-import 'classes/brinde.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'utils.dart';
@@ -30,26 +29,6 @@ import 'utils.dart';
  */
 
 main() {
-  /* Declaração de objetos Brinde */
-
-  // Declare aqui alguns objetos do tipo Brinde...
-    // Exemplo: Brinde brindeA = Brinde('Colônia Egeo 10ml', 15);
-
-
-  /* Testes da classe Brinde */
-
-  // Teste o método consultarPontosNecessarios algumas vezes...
-    // Exemplo: brindeA.consultarPontosNecessarios();
-    // Saída esperada: Para ganhar um(a) Colônia Egeo 10ml você precisa de 15 pontos.
-
-  // Teste o método realizarTroca algumas vezes...
-    // Exemplo: brindeA.realizarTroca();
-    // Saída esperada: Troca realizada! Você ganhou um Colônia Egeo 10ml.
-
-  // pularLinha();
-
-  /* ------------------------------------------ */
-
   /* Declaração de objetos Produto */
 
   // Declare aqui alguns objetos do tipo Produto...
