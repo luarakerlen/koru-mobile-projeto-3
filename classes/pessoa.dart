@@ -1,5 +1,5 @@
 class Pessoa {
   String nome;
-
-  Pessoa(this.nome);
+  String cpf;
+  Pessoa(this.nome, this.cpf);
 }
