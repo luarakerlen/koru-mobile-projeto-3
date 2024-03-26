@@ -31,40 +31,41 @@ import 'utils.dart';
 main() {
   /* Declaração de objetos Produto */
 
-  // Declare aqui alguns objetos do tipo Produto...
-    // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
-
+  Produto produtoA = Produto(
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
 
   /* Testes da classe Produto */
 
-  // Teste o método realizarVenda algumas vezes...
-    // Exemplo: produtoA.realizarVenda();
-    // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
-    // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
+  produtoA.realizarVenda();
 
-  // Teste o método verReceitaGerada algumas vezes...
-    // Exemplo: print(produtoA.verReceitaGerada());
+  produtoA.realizarVenda();
+  produtoA.realizarVenda();
 
-  // pularLinha();
+  produtoA.realizarVenda();
+
+  print(produtoA.verReceitaGerada());
+
+  pularLinha();
 
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
 
   // Declare aqui alguns objetos do tipo Pessoa...
-    // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
-
+  // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
-    // Exemplo: pessoaA.falar('Oi, tudo bem?');
-    // Saída esperada: Maria diz: Oi, tudo bem?
+  // Exemplo: pessoaA.falar('Oi, tudo bem?');
+  // Saída esperada: Maria diz: Oi, tudo bem?
 
   // Teste o método maioridade algumas vezes...
-    // Exemplo: pessoaA.maioridade();
-    // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
-    // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
+  // Exemplo: pessoaA.maioridade();
+  // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
+  // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
 
   // pularLinha();
 
