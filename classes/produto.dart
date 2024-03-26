@@ -9,4 +9,7 @@ class Produto {
     required this.valor,
     required this.qtdEmEstoque,
   });
+  double verReceitaGerada() {
+    return this.valor * this.qtdVendida;
+  }
 }
