@@ -39,6 +39,19 @@ main() {
   print(pessoa8);
   print(pessoa9);
   print(pessoa10);
+  pularLinha();
+  pularLinha();
+
+  print(produto1);
+  print(produto2);
+  print(produto3);
+  print(produto4);
+  print(produto5);
+  print(produto6);
+  print(produto7);
+  print(produto8);
+  print(produto9);
+  print(produto10);
 
   /* Declaração de objetos Produto */
 
