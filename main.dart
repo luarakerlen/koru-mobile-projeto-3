@@ -65,8 +65,29 @@ main() {
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
   /* Testes da classe Pessoa */
+  final maria = Pessoa(
+    nome: 'Maria',
+    cpf: '123.456.789-00',
+    dataDeNascimento: DateTime(1990, 1, 1),
+  );
+  final joao = Pessoa(
+    nome: 'Joao',
+    cpf: '123.456.789-00',
+    dataDeNascimento: DateTime(1990, 1, 1),
+  );
+
+  final ana = Pessoa (
+    nome: 'Ana',
+    cpf: '876.543.219-00',
+    dataDeNascimento: DateTime(1998, 07, 15),
+  );
+
+  maria.fala('Oi, tudo bem?');
+  joao.fala('Boa tarde , Tudo bem com vocês?');
+  ana.fala('Olá, Maria e João. Bom vê-los por aqui!');
 
   // Teste o método falar algumas vezes...
+
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
   // Saída esperada: Maria diz: Oi, tudo bem?
 
