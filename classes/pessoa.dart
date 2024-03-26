@@ -25,6 +25,10 @@ class Pessoa {
     }
   }
 
+    void fala(String fala) {
+    print('$nome diz: $fala');
+  }
+
   @override
   String toString() {
     return '$nome, $cpf, $idade';
