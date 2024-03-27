@@ -59,6 +59,8 @@ main() {
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   /* Testes da classe Produto */
+  // Teste o método realizarVenda algumas vezes...
+  /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
   // Exemplo: produtoA.realizarVenda();
