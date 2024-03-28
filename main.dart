@@ -34,8 +34,10 @@ main() {
   // Declare aqui alguns objetos do tipo Produto...
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
   // Criando objeto Produto
-  final produtoVenda =
-      Produto('Colônia Floratta Flores Secretas 75ml', 104.90, 3);
+  final produtoVenda = Produto(
+      nome: 'Colônia Floratta Flores Secretas 75ml',
+      valor: 104.90,
+      qtdEmEstoque: 3);
 
   /* Testes da classe Produto */
 
