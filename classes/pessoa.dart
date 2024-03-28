@@ -10,6 +10,15 @@ class Pessoa {
     required this.cpf,
   });
 
+  void maiorIdade() {
+    final idade = calcularIdade();
+
+    if (idade >= 18) {
+      print('$nome tem $idade anos, portanto é maior de idade.');
+    } else {
+      print('$nome tem $idade anos, portanto é menor de idade.');
+    }
+
   void falar(String mensagem) {
     print("$nome diz: $mensagem");
   }
