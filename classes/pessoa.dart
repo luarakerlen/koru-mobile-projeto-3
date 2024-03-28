@@ -10,7 +10,7 @@ class Pessoa {
     required this.cpf,
   });
 
-   void falar(String mensagem){
+  void falar(String mensagem) {
     print("$nome diz: $mensagem");
   }
 }
