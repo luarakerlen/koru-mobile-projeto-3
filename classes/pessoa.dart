@@ -10,7 +10,6 @@ class Pessoa {
     required this.cpf,
   });
 
-
   void maiorIdade() {
     final idade = calcularIdade();
 
@@ -20,8 +19,7 @@ class Pessoa {
       print('$nome tem $idade anos, portanto é menor de idade.');
     }
 
-   void falar(String mensagem){
+  void falar(String mensagem) {
     print("$nome diz: $mensagem");
-
   }
 }
