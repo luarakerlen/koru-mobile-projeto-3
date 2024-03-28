@@ -58,8 +58,27 @@ main() {
   // Declare aqui alguns objetos do tipo Produto...
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
+  final produtoA = Produto(
+    nomeProduto: 'Kit Presente Coleção Mini Perfumaria (4 itens)',
+    valor: 111.80,
+    qtdEmEstoque: 1,
+  );
+
+  final produtoB = Produto(
+    nomeProduto: 'LILY EAU DE PARFUM 50ml',
+    valor: 294.90,
+    qtdEmEstoque: 2,
+  );
+
   /* Testes da classe Produto */
   // Teste o método realizarVenda algumas vezes...
+  pularLinha();
+  produtoA.realizarVenda();
+  produtoA.realizarVenda();
+  produtoB.realizarVenda();
+  produtoB.realizarVenda();
+  pularLinha();
+
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
@@ -91,7 +110,7 @@ main() {
     dataDeNascimento: DateTime(1990, 1, 1),
   );
 
-  final ana = Pessoa (
+  final ana = Pessoa(
     nome: 'Ana',
     cpf: '876.543.219-00',
     dataDeNascimento: DateTime(1998, 07, 15),
