@@ -33,9 +33,10 @@ main() {
 
   // Declare aqui alguns objetos do tipo Produto...
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
-   var produto = Produto("Colônia Floratta Flores Secretas 75ml");
+   var produto = Produto("Colônia Floratta Flores Secretas 75ml", 104.90);
    print("Nome: ${produto.nome}");
-   
+   print("Valor: ${produto.valor}");
+  
 
   /* Testes da classe Produto */
 
