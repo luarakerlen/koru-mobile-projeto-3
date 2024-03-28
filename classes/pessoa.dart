@@ -25,7 +25,15 @@ class Pessoa {
     }
   }
 
-    void fala(String fala) {
+  void maioridade() {
+    if (idade >= 18) {
+      print('$nome tem $idade anos, portanto é maior de idade.');
+    } else {
+      print('$nome tem $idade anos, portanto é menor de idade.');
+    }
+  }
+
+  void fala(String fala) {
     print('$nome diz: $fala');
   }
 
