@@ -102,12 +102,12 @@ main() {
   final maria = Pessoa(
     nome: 'Maria',
     cpf: '123.456.789-00',
-    dataDeNascimento: DateTime(1990, 1, 1),
+    dataDeNascimento: DateTime(1994, 1, 30),
   );
   final joao = Pessoa(
     nome: 'Joao',
     cpf: '123.456.789-00',
-    dataDeNascimento: DateTime(1990, 1, 1),
+    dataDeNascimento: DateTime(2010, 1, 1),
   );
 
   final ana = Pessoa(
@@ -128,8 +128,9 @@ main() {
   // Teste o método maioridade algumas vezes...
   // Exemplo: pessoaA.maioridade();
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
+  maria.maioridade();
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
-
+  joao.maioridade();
   // pularLinha();
 
   /* ------------------------------------------ */
