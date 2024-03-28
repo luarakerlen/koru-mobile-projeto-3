@@ -1,6 +1,6 @@
 class Produto {
 
   int qtdEmEstoque = 0;
-  int qtdVendida = 0;
+  late int qtdVendida;
 
 }
