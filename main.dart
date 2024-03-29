@@ -29,6 +29,9 @@ import 'utils.dart';
  */
 
 main() {
+
+
+    
   /* Declaração de objetos Produto */
 
   // Declare aqui alguns objetos do tipo Produto...
@@ -51,6 +54,15 @@ main() {
 
   /* Declaração de objetos Pessoa */
 
+ Pessoa pessoa1 =Pessoa("maria", "452464545452", DateTime.parse("1980-04-12"));
+  pessoa1.falar("oi,tudo bem?");
+  pessoa1.maioridade();
+
+
+ Pessoa pessoa2 =Pessoa("jose", "121212121212", DateTime.parse("2012-12-12"));
+  pessoa2.falar("oi,tudo bem?");
+  pessoa2.maioridade();
+  
   // Declare aqui alguns objetos do tipo Pessoa...
     // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
