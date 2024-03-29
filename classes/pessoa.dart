@@ -23,4 +23,14 @@ class Pessoa {
       print("$nome diz: $mensagem");
     }
   }
+  int calcularIdade() {
+  final DateTime dataAtual = DateTime.now();
+  int idade = dataAtual.year - dataDeNascimento.year;
+  if (dataAtual.month < dataDeNascimento.month ||
+     (dataAtual.month == dataDeNascimento.month &&
+     dataAtual.day < dataDeNascimento.day)) {
+    idade--;
+  }
+  return idade;
+}
 }
