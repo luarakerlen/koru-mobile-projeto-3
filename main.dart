@@ -31,6 +31,10 @@ import 'utils.dart';
 main() {
   /* Declaração de objetos Produto */
 
+ Produto parfumLily = Produto("parfumLily", 299.90, 2);
+ parfumLily.realizarVenda();
+ print(parfumLily.verReceitaGerada());
+
   // Declare aqui alguns objetos do tipo Produto...
     // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
