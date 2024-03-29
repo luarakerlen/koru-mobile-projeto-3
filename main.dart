@@ -54,6 +54,10 @@ main() {
   // Declare aqui alguns objetos do tipo Pessoa...
     // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
+    
+      
+    
+
 
   /* Testes da classe Pessoa */
 
