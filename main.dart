@@ -53,14 +53,14 @@ main() {
 
   // Declare aqui alguns objetos do tipo Pessoa...
     // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
-
+  Pessoa pessoaA = Pessoa("Carla", "12345678900", DateTime.utc(1987,05,15));
 
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
     // Exemplo: pessoaA.falar('Oi, tudo bem?');
     // Saída esperada: Maria diz: Oi, tudo bem?
-
+  pessoaA.falar("oi tudo bem");
   // Teste o método maioridade algumas vezes...
     // Exemplo: pessoaA.maioridade();
     // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
