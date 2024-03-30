@@ -21,4 +21,10 @@ class Pessoa {
     return idade!;
   }
 
+
+  // criacao metodo falar carlabudne
+  void falar(String fala){
+    print("$nome diz: $fala ");
+  }
+
 }
