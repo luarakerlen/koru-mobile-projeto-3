@@ -22,7 +22,6 @@ class ProdutoImpl implements Produto {
 
   @override
   double verReceitaGerada() {
-    // TODO: implement verReceitaGerada
-    throw UnimplementedError();
+    return qtdVendida * valor;
   }
 }
