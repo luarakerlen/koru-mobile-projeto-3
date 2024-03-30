@@ -33,14 +33,10 @@ main() {
 
   // Declare aqui alguns objetos do tipo Produto...
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
-  // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
-  // Exemplo: produtoA.realizarVenda();
-  // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
-  // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
   // Exemplo: produtoA.realizarVenda();
   // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
   // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
@@ -72,9 +68,9 @@ main() {
   // Teste o método falar algumas vezes...
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
   // Saída esperada: Maria diz: Oi, tudo bem?
-  // Exemplo: pessoaA.falar('Oi, tudo bem?');
-  // Saída esperada: Maria diz: Oi, tudo bem?
-
+  pessoaA.falar('Oi, tudo bem?');
+  
+  
   //Teste do método calcular idade
   Pessoa pessoaC = Pessoa(
       nome: "Maria",
@@ -93,9 +89,7 @@ main() {
   // Exemplo: pessoaA.maioridade();
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
-  /* Exemplo:pessoaA.maioridade();*/
-  // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
-  // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
+  
   pessoaC.verificarMaioridade();
   pessoaB.verificarMaioridade();
 

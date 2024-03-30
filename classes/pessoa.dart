@@ -20,4 +20,8 @@ class Pessoa {
         : ("$nome tem $idade, portanto é menor de idade!"));
     print(verificar);
   }
+  //método falar
+  void falar(String fala) {
+    print('$nome diz: $fala');
+  }
 }
