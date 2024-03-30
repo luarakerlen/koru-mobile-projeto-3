@@ -1,4 +1,6 @@
 class Pessoa {
+  final DateTime dataDeNascimento;
+  late int idade;
   //construtor
   Pessoa({required this.dataDeNascimento}) {
     idade = calcularIdade();

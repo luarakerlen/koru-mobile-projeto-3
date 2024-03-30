@@ -54,7 +54,7 @@ main() {
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
-
+  Pessoa pessoaA = Pessoa(dataDeNascimento: DateTime.parse('1995-05-20'));
   // Declare aqui alguns objetos do tipo Pessoa...
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
@@ -68,12 +68,12 @@ main() {
   // Saída esperada: Maria diz: Oi, tudo bem?
 
   //Teste do método calcular idade
-  Pessoa pessoaA =
+  Pessoa pessoaC =
       Pessoa("Maria", dataDeNascimento: DateTime.parse('1994-01-06')); //30
   Pessoa pessoaB =
       Pessoa("João", dataDeNascimento: DateTime.parse('1994-11-12')); //29
   //29
-  print(pessoaA.idade);
+  print(pessoaC.idade);
   print(pessoaB.idade);
   pularLinha();
 
@@ -84,7 +84,7 @@ main() {
   /* Exemplo:pessoaA.maioridade();*/
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
-  pessoaA.verificarMaioridade();
+  pessoaC.verificarMaioridade();
   pessoaB.verificarMaioridade();
 
   // pularLinha();
