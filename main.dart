@@ -1,6 +1,6 @@
 // Importações dos arquivos que serão utilizados
 import 'classes/pessoa.dart';
-import 'classes/produto.dart';
+//import 'classes/produto.dart';
 import 'utils.dart';
 
 /**
@@ -59,17 +59,23 @@ main() {
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
   // Saída esperada: Maria diz: Oi, tudo bem?
 
-  // Teste o método maioridade algumas vezes...
-  // Exemplo: pessoaA.maioridade();
-  // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
-  // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
-
   //Teste do método calcular idade
-  Pessoa pessoaA = Pessoa(dataDeNascimento: DateTime.parse('1994-01-06')); //30
-  Pessoa pessoaB = Pessoa(dataDeNascimento: DateTime.parse('1994-11-12')); //29
+  Pessoa pessoaA =
+      Pessoa("Maria", dataDeNascimento: DateTime.parse('1994-01-06')); //30
+  Pessoa pessoaB =
+      Pessoa("João", dataDeNascimento: DateTime.parse('1994-11-12')); //29
+   //29
   print(pessoaA.idade);
   print(pessoaB.idade);
   pularLinha();
+
+  // Teste o método maioridade algumas vezes...
+  /* Exemplo:pessoaA.maioridade();*/
+  // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
+  // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
+  pessoaA.verificarMaiorIdade();
+  pessoaB.verificarMaiorIdade();
+  
 
   // pularLinha();
 
