@@ -34,7 +34,9 @@ main() {
   // Declare aqui alguns objetos do tipo Produto...
     // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
-
+  Produto produto6 = Produto("Malbec Ultra Bleu Desodorante Colônia 100ml", 179.90 , 6);
+  Produto produto7 = Produto("Egeo Beat Desodorante Colônia 90ml", 119.80 , 4);
+  Produto produto8 = Produto("Arbo Desodorante Colônia 100ml", 164.90 , 7);
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
@@ -44,7 +46,9 @@ main() {
 
   // Teste o método verReceitaGerada algumas vezes...
     // Exemplo: print(produtoA.verReceitaGerada());
-    
+    print(produto6.verReceitaGerada());
+    print(produto7.verReceitaGerada());
+    print(produto8.verReceitaGerada());
 
   // pularLinha();
 
