@@ -1,6 +1,6 @@
 // Importações dos arquivos que serão utilizados
 import 'classes/pessoa.dart';
-//import 'classes/produto.dart';
+import 'classes/produto.dart';
 import 'utils.dart';
 
 /**
@@ -73,8 +73,8 @@ main() {
   /* Exemplo:pessoaA.maioridade();*/
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
-  pessoaA.verificarMaiorIdade();
-  pessoaB.verificarMaiorIdade();
+  pessoaA.verificarMaioridade();
+  pessoaB.verificarMaioridade();
   
 
   // pularLinha();
