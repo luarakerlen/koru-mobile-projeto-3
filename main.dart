@@ -54,6 +54,14 @@ main() {
   // Declare aqui alguns objetos do tipo Pessoa...
     // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
+    
+      Pessoa pessoaA = Pessoa ('Maria', '012345678900');
+
+      
+      print('Nome: ${pessoaA.nome}');
+      print('CPF: ${pessoaA.cpf}');
+    
+
 
   /* Testes da classe Pessoa */
 
