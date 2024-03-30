@@ -6,4 +6,8 @@ class Produto {
 
   Produto(this.nome, this.valor, this.qtdEmEstoque);
 
+  verReceitaGerada(){
+    return valor * qtdVendida;
+  }
+
 }

@@ -44,6 +44,7 @@ main() {
 
   // Teste o método verReceitaGerada algumas vezes...
     // Exemplo: print(produtoA.verReceitaGerada());
+    
 
   // pularLinha();
 
