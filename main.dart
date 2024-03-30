@@ -33,15 +33,27 @@ main() {
 
   // Declare aqui alguns objetos do tipo Produto...
     // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
+<<<<<<< HEAD
 
   Produto produto6 = Produto("Malbec Ultra Bleu Desodorante Colônia 100ml", 179.90 , 6);
   Produto produto7 = Produto("Egeo Beat Desodorante Colônia 90ml", 119.80 , 4);
   Produto produto8 = Produto("Arbo Desodorante Colônia 100ml", 164.90 , 7);
+=======
+  Produto produto1 = Produto("Desodorante Antitranspirante Aerossol Club 6 125ml", 23.33, 5);
+  Produto produto2 = Produto("Shampoo Siàge Remove A Oleosidade 250ml", 42.99, 3);
+  Produto produto3 = Produto("Condicionador Instance Frutas Vermelhas 300 ml", 23.99, 0);
+  Produto produto4 = Produto("Sérum Facial Multiprotetor FPS 50 12 em 1 Niina Secrets Skin 30ml", 109.99, 3);
+  Produto produto5 = Produto("Pó Compacto Adapt Glam Skin Protect 10g", 49.99, 1);
+
+>>>>>>> 95faa05c5e9c89f7731f3c9909309f9b977ae055
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
     // Exemplo: produtoA.realizarVenda();
     // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
+    produto1.realizarVenda();
+    pularLinha();
+    produto3.realizarVenda();
     // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
 
   // Teste o método verReceitaGerada algumas vezes...
@@ -60,14 +72,23 @@ main() {
     // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
 
-  /* Testes da classe Pessoa */
+  /* Testes da classe Pessoa */  
+  Pessoa pessoaB = Pessoa("Joaquina", "95663323585", DateTime.parse("2006-03-27")); // já fez aniversário este ano -> maior de idade
+  Pessoa pessoaC = Pessoa("Antonio", "95663323585", DateTime.parse("2006-08-03")); // não fez aniversário este ano -> menor de idade 
+  Pessoa pessoaA = Pessoa("Carla", "12345678900", DateTime.parse("1987-05-15"));
 
+  /* Testes da classe Pessoa */
   // Teste o método falar algumas vezes...
+  
+   pessoaA.falar("oi tudo bem");
     // Exemplo: pessoaA.falar('Oi, tudo bem?');
     // Saída esperada: Maria diz: Oi, tudo bem?
+  // Teste o método maioridade algumas vezes... 
+  
 
   // Teste o método maioridade algumas vezes...
     // Exemplo: pessoaA.maioridade();
+
     // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
     // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
 
