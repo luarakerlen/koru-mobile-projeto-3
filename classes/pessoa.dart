@@ -1,8 +1,12 @@
 class Pessoa {
+  final String nome;
+  final String cpf;
   final DateTime dataDeNascimento;
   late int idade;
+
   //construtor
-  Pessoa({required this.dataDeNascimento}) {
+  Pessoa(
+      {required this.nome, required this.cpf, required this.dataDeNascimento}) {
     idade = calcularIdade();
   }
   //inserir metodo calcularIdade (retorno: int)
