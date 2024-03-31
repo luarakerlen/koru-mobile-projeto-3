@@ -25,7 +25,14 @@ class Produto {
       print('Desculpe! No momento não possuímos o produto $nomeProduto em estoque.');
     }
   }
+
+  double verReceitaGerada(){
+
+    double receita = valor * qtdVendida;
+    return receita;
+  }
 }
+
 
 final produto1 = Produto(
   nomeProduto: 'Kit Presente Coleção Mini Perfumaria (4 itens)',
@@ -46,7 +53,7 @@ final produto3 = Produto(
 );
 
 final produto4 = Produto(
-  nomeProduto: "FLORATTA My Blue Desodorante Colônia 75m",
+  nomeProduto: "FLORATTA My Blue Desodorante Colônia 75ml",
   valor: 129.90,
   qtdEmEstoque: 50,
 );
@@ -87,3 +94,6 @@ final produto10 = Produto(
   valor: 35.90,
   qtdEmEstoque: 50,
 );
+
+
+
