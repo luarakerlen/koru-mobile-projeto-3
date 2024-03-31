@@ -27,4 +27,16 @@ class Pessoa {
     print("$nome diz: $fala ");
   }
 
+
+  //Criação do Método Maioridade
+  void maioridade (){
+    if (idade >= 18){
+      print("$nome tem $idade anos, portanto é maior de idade");
+      } else{
+          print("$nome tem $idade anos, portanto é menor de idade");
+    }   
+
+  }
+  
+
 }
