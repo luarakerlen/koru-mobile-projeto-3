@@ -25,4 +25,10 @@ class Produto {
       print('Desculpe! No momento não possuímos o produto $nomeProduto em estoque.');
     }
   }
+
+  double verReceitaGerada(){
+
+    double receita = valor * qtdVendida;
+    return receita;
+  }
 }

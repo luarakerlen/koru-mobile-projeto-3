@@ -124,6 +124,11 @@ main() {
   // Teste o método verReceitaGerada algumas vezes...
   // Exemplo: print(produtoA.verReceitaGerada());
 
+  pularLinha();
+  print('A receita gerada pelo produto ${produtoA.nomeProduto} é: ${produtoA.verReceitaGerada()} reais');
+  print('A receita gerada pelo produto ${produtoB.nomeProduto} é: ${produtoB.verReceitaGerada()} reais');
+  pularLinha();
+
   // pularLinha();
 
   /* ------------------------------------------ */
