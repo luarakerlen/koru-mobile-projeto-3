@@ -45,7 +45,7 @@ main() {
   // Exemplo: print(produtoA.verReceitaGerada());
   // Exemplo: print(produtoA.verReceitaGerada());
 
-  // pularLinha();
+  pularLinha();
 
   /* ------------------------------------------ */
 
@@ -69,8 +69,7 @@ main() {
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
   // Saída esperada: Maria diz: Oi, tudo bem?
   pessoaA.falar('Oi, tudo bem?');
-  
-  
+
   //Teste do método calcular idade
   Pessoa pessoaC = Pessoa(
       nome: "Maria",
@@ -89,7 +88,7 @@ main() {
   // Exemplo: pessoaA.maioridade();
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
-  
+
   pessoaC.verificarMaioridade();
   pessoaB.verificarMaioridade();
 
