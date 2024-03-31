@@ -1,4 +1,5 @@
 import 'classes/produtoImpl.dart';
+import 'classes/pessoaImpl.dart';
 
 main() {
   /* Declaração de objetos Produto */
@@ -12,6 +13,17 @@ main() {
   print('Receita gerada com o produto: ${produto.verReceitaGerada()}');
   print('Produto em estoque: ${produto.qtdEstoque}');
   print('-------------------------------------------------------------------');
+
+
+  /* Declaração de objetos Pessoa */
+  PessoaImpl pessoa = PessoaImpl(nome: 'Glória Maria', cpf: '01234567891', dataNascimento: DateTime(1990,01,01));
+  pessoa.falar(pessoa.nome);
+  pessoa.maiorIdade();
+  print('-------------------------------------------------------------------');
+  PessoaImpl pessoa2 = PessoaImpl(nome: 'Aninha', cpf: '01234567892', dataNascimento: DateTime(2010,01,01));
+  pessoa2.falar(pessoa2.nome);
+  pessoa2.maiorIdade();
+
 }
 
 
