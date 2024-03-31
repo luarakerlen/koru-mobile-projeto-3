@@ -1,14 +1,10 @@
 import 'produto.dart';
 
-class ProdutoImpl implements Produto {
-
-  final String nome;
-  final double valor;
-  int qtdEstoque;
+class ProdutoImpl extends Produto {
   int qtdVendida = 0;
 
   ProdutoImpl(
-      {required this.nome, required this.valor, required this.qtdEstoque});
+      {required super.nome, required super.valor, required super.qtdEstoque});
 
   @override
   void realizarVenda() {
@@ -21,8 +17,8 @@ class ProdutoImpl implements Produto {
     }
   }
 
-    @override
-    double verReceitaGerada() {
-      return qtdVendida * valor;
-    }
+  @override
+  double verReceitaGerada() {
+    return qtdVendida * valor;
   }
+}
