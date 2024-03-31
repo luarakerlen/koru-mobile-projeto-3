@@ -80,16 +80,21 @@ main() {
    pessoaA.falar("oi tudo bem");
     // Exemplo: pessoaA.falar('Oi, tudo bem?');
     // Saída esperada: Maria diz: Oi, tudo bem?
-  // Teste o método maioridade algumas vezes... 
   
+    pularLinha();
 
-  // Teste o método maioridade algumas vezes...
+    // Teste o método maioridade algumas vezes...
     // Exemplo: pessoaA.maioridade();
+
+    pessoaA.maioridade();
+    pessoaB.maioridade();
+    pessoaC.maioridade();
 
     // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
     // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
 
-  // pularLinha();
+    pularLinha();
+  
 
   /* ------------------------------------------ */
 }
