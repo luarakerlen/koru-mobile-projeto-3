@@ -29,30 +29,6 @@ import 'utils.dart';
  */
 
 main() {
-  print(pessoa1);
-  print(pessoa2);
-  print(pessoa3);
-  print(pessoa4);
-  print(pessoa5);
-  print(pessoa6);
-  print(pessoa7);
-  print(pessoa8);
-  print(pessoa9);
-  print(pessoa10);
-  pularLinha();
-  pularLinha();
-
-  print(produto1);
-  print(produto2);
-  print(produto3);
-  print(produto4);
-  print(produto5);
-  print(produto6);
-  print(produto7);
-  print(produto8);
-  print(produto9);
-  print(produto10);
-
   /* Declaração de objetos Produto */
 
   // Declare aqui alguns objetos do tipo Produto...
@@ -61,14 +37,73 @@ main() {
   final produtoA = Produto(
     nomeProduto: 'Kit Presente Coleção Mini Perfumaria (4 itens)',
     valor: 111.80,
-    qtdEmEstoque: 1,
+    qtdEmEstoque: 12,
   );
 
   final produtoB = Produto(
     nomeProduto: 'LILY EAU DE PARFUM 50ml',
     valor: 294.90,
-    qtdEmEstoque: 2,
+    qtdEmEstoque: 35,
   );
+
+  final produtoC = Produto(
+    nomeProduto: 'ELISÉ EAU DE PARFUM 50 ML',
+    valor: 294.80,
+    qtdEmEstoque: 35,
+  );
+
+  final produtoD = Produto(
+    nomeProduto: "FLORATTA My Blue Desodorante Colônia 75m",
+    valor: 129.90,
+    qtdEmEstoque: 50,
+  );
+
+  final produtoE = Produto(
+    nomeProduto: 'Malbec Ultra Bleu Desodorante Colônia 100ml',
+    valor: 179.90,
+    qtdEmEstoque: 80,
+  );
+
+  final produtoF = Produto(
+    nomeProduto:
+        'Botica 214 Verano en Firenze Eau de Parfum Fougère Aromático 90ml',
+    valor: 164.90,
+    qtdEmEstoque: 35,
+  );
+
+  final produtoG = Produto(
+    nomeProduto: 'Egeo Bomb Black Desodorante Colônia 90ml',
+    valor: 199.80,
+    qtdEmEstoque: 20,
+  );
+
+  final produtoH = Produto(
+    nomeProduto: 'Shampoo Match Ciências das Curvas 300ml',
+    valor: 41.90,
+    qtdEmEstoque: 12,
+  );
+
+  final produtoI = Produto(
+    nomeProduto: 'Sérum Facial de Alta Potência Botik Retinol Puro 30ml',
+    valor: 204.90,
+    qtdEmEstoque: 35,
+  );
+
+  final produtoJ = Produto(
+    nomeProduto: 'LINHA PET Limpa e Hidrata Patinhas Au.Migos Pets 120ml',
+    valor: 35.90,
+    qtdEmEstoque: 50,
+  );
+  print(produtoA);
+  print(produtoB);
+  print(produtoC);
+  print(produtoD);
+  print(produtoE);
+  print(produtoF);
+  print(produtoG);
+  print(produtoH);
+  print(produtoI);
+  print(produtoJ);
 
   /* Testes da classe Produto */
   // Teste o método realizarVenda algumas vezes...
@@ -91,6 +126,7 @@ main() {
 
   pularLinha();
   print('A receita gerada pelo produto ${produtoA.nomeProduto} é: ${produtoA.verReceitaGerada()} reais');
+  print('A receita gerada pelo produto ${produtoB.nomeProduto} é: ${produtoB.verReceitaGerada()} reais');
   pularLinha();
 
   // pularLinha();
@@ -103,23 +139,72 @@ main() {
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
   /* Testes da classe Pessoa */
+
   final maria = Pessoa(
     nome: 'Maria',
-    cpf: '123.456.789-00',
-    dataDeNascimento: DateTime(1994, 1, 30),
+    cpf: '12345678900',
+    dataDeNascimento: DateTime.parse('1994-01-06'),
   );
   final joao = Pessoa(
-    nome: 'Joao',
-    cpf: '123.456.789-00',
-    dataDeNascimento: DateTime(2010, 1, 1),
+    nome: 'João',
+    cpf: '98345678900',
+    dataDeNascimento: DateTime.parse('1990-10-04'),
   );
-
   final ana = Pessoa(
     nome: 'Ana',
-    cpf: '876.543.219-00',
-    dataDeNascimento: DateTime(1998, 07, 15),
+    cpf: '87654321900',
+    dataDeNascimento: DateTime.parse('1998-07-15'),
   );
 
+  final pedro = Pessoa(
+    nome: 'Pedro',
+    cpf: '76543219800',
+    dataDeNascimento: DateTime.parse('1985-03-22'),
+  );
+  final carla = Pessoa(
+    nome: 'Carla',
+    cpf: '65432198700',
+    dataDeNascimento: DateTime.parse('1992-11-30'),
+  );
+  final rafaela = Pessoa(
+    nome: 'Rafaela',
+    cpf: '54321987600',
+    dataDeNascimento: DateTime.parse('1980-09-10'),
+  );
+
+  final leandro = Pessoa(
+    nome: 'Leandro',
+    cpf: '43219876500',
+    dataDeNascimento: DateTime.parse('1976-05-25'),
+  );
+  final fernanda = Pessoa(
+    nome: 'Fernanda',
+    cpf: '32198765400',
+    dataDeNascimento: DateTime.parse('1991-12-08'),
+  );
+  final mariana = Pessoa(
+    nome: 'Mariana',
+    cpf: '21987654300',
+    dataDeNascimento: DateTime.parse('1987-02-18'),
+  );
+
+  final gabriel = Pessoa(
+    nome: 'Gabriel',
+    cpf: '19876543200',
+    dataDeNascimento: DateTime.parse('2000-08-03'),
+  );
+
+  print(maria);
+  print(joao);
+  print(ana);
+  print(pedro);
+  print(carla);
+  print(rafaela);
+  print(leandro);
+  print(fernanda);
+  print(mariana);
+  print(gabriel);
+  pularLinha();
   maria.fala('Oi, tudo bem?');
   joao.fala('Boa tarde , Tudo bem com vocês?');
   ana.fala('Olá, Maria e João. Bom vê-los por aqui!');
