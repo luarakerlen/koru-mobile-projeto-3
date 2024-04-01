@@ -22,9 +22,9 @@ class Produto {
       print('Compra de um(a) produto $nome realizada com sucesso!');
       print('Quantidade em estoque: $qtdEmEstoque');
     }
+  }
 
-    double verReceitaGerada() {
-      return this.valor * this.qtdVendida;
-    }
+  double verReceitaGerada() {
+    return this.valor * this.qtdVendida;
   }
 }
