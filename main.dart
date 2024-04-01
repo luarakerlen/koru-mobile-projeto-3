@@ -34,15 +34,16 @@ main() {
   // Declare aqui alguns objetos do tipo Produto...
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
-  Produto produtoA = Produto(nome: 'Mousepad', valor: 50.5, qtdEmEstoque: 5);
-  Produto produtoB = Produto(nome: 'Teclado', valor: 215.0, qtdEmEstoque: 40);
-  Produto produtoC = Produto(nome: 'Headset', valor: 322.0, qtdEmEstoque: 0);
+  Produto produtoA = Produto(nome: 'Malbec', valor: 179.90, qtdEmEstoque: 5);
+  Produto produtoB = Produto(nome: 'Zaad', valor: 269.90, qtdEmEstoque: 40);
+  Produto produtoC = Produto(nome: 'Portinari', valor: 169.9, qtdEmEstoque: 0);
 
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
   // Exemplo: produtoA.realizarVenda();
 
+  produtoA.realizarVenda();
   produtoA.realizarVenda();
   produtoA.realizarVenda();
   produtoB.realizarVenda();
@@ -82,6 +83,12 @@ main() {
     cpf: '12345678900',
   );
 
+  Pessoa pessoaD = Pessoa(
+    nome: 'Marcos',
+    dataDeNascimento: DateTime(2010, 10, 25),
+    cpf: '12345678900',
+  );
+
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
@@ -93,6 +100,7 @@ main() {
   pessoaC.falar('Qual o melhor grupo do desenvolve?');
   pessoaA.falar('É o grupo Dartmode, eles são dedicados.');
   pessoaA.falar('Sim, estão de parabéns');
+  pessoaD.falar('Oi pessoal sobre o que estão falando?');
 
   // Teste o método maioridade algumas vezes...
   // Exemplo: pessoaA.maioridade();
@@ -102,6 +110,7 @@ main() {
   pessoaA.maiorIdade();
   pessoaB.maiorIdade();
   pessoaC.maiorIdade();
+  pessoaD.maiorIdade();
 
   pularLinha();
 
