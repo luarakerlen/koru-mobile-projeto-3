@@ -34,17 +34,31 @@ main() {
   // Declare aqui alguns objetos do tipo Produto...
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
+  Produto produtoA = Produto(nome: 'Mousepad', valor: 50.5, qtdEmEstoque: 5);
+  Produto produtoB = Produto(nome: 'Teclado', valor: 215.0, qtdEmEstoque: 40);
+  Produto produtoC = Produto(nome: 'Headset', valor: 322.0, qtdEmEstoque: 0);
+
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
   // Exemplo: produtoA.realizarVenda();
+
+  produtoA.realizarVenda();
+  produtoA.realizarVenda();
+  produtoB.realizarVenda();
+  produtoC.realizarVenda();
+
   // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
   // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
 
   // Teste o método verReceitaGerada algumas vezes...
   // Exemplo: print(produtoA.verReceitaGerada());
 
-  // pularLinha();
+  print(produtoA.verReceitaGerada());
+  print(produtoB.verReceitaGerada());
+  print(produtoC.verReceitaGerada());
+
+  pularLinha();
 
   /* ------------------------------------------ */
 
@@ -53,18 +67,43 @@ main() {
   // Declare aqui alguns objetos do tipo Pessoa...
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
+  Pessoa pessoaA = Pessoa(
+      nome: 'Matheus',
+      dataDeNascimento: DateTime(2000, 12, 01),
+      cpf: '12345678900');
+  Pessoa pessoaB = Pessoa(
+      nome: 'Maria',
+      dataDeNascimento: DateTime(1999, 11, 08),
+      cpf: '12345678900');
+
+  Pessoa pessoaC = Pessoa(
+    nome: 'Jose',
+    dataDeNascimento: DateTime(1980, 01, 15),
+    cpf: '12345678900',
+  );
+
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
   // Saída esperada: Maria diz: Oi, tudo bem?
 
+  pessoaA.falar('Oi, tudo bem?');
+  pessoaB.falar('Estou bem e você?');
+  pessoaC.falar('Qual o melhor grupo do desenvolve?');
+  pessoaA.falar('É o grupo Dartmode, eles são dedicados.');
+  pessoaA.falar('Sim, estão de parabéns');
+
   // Teste o método maioridade algumas vezes...
   // Exemplo: pessoaA.maioridade();
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
 
-  // pularLinha();
+  pessoaA.maiorIdade();
+  pessoaB.maiorIdade();
+  pessoaC.maiorIdade();
+
+  pularLinha();
 
   /* ------------------------------------------ */
 }
