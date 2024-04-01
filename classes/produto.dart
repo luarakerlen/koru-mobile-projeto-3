@@ -18,4 +18,8 @@ class Produto {
       print("No momento não possuímos o produto $nome em estoque.");
     }
   }
+
+  double verReceitaGerada(){
+    return valor*qtdVendida;
+  }
 }

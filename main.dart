@@ -34,6 +34,18 @@ main() {
   // Declare aqui alguns objetos do tipo Produto...
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
+  Produto produtoA = Produto(
+    nome: "Colônia Floratta Flores Secretas 75ml",
+    valor: 104.90,
+    qtdEmEstoque: 3
+  );
+  
+  Produto produtoB = Produto(
+    nome: "Colônia Floratta Red 75ml",
+    valor: 75.90,
+    qtdEmEstoque: 0
+  );
+
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
@@ -41,10 +53,14 @@ main() {
   // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
   // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
 
+  produtoA.realizarVenda();
+  produtoB.realizarVenda();
+
   // Teste o método verReceitaGerada algumas vezes...
   // Exemplo: print(produtoA.verReceitaGerada());
   // Exemplo: print(produtoA.verReceitaGerada());
-
+  print(produtoA.verReceitaGerada());
+  print(produtoB.verReceitaGerada());
   pularLinha();
 
   /* ------------------------------------------ */
