@@ -1,6 +1,13 @@
 class Produto {
+  final String nome;
+  double valor;
   int qtdEmEstoque = 0;
-  late int qtdVendida;
+  int qtdVendida = 0;
+
+  //construtor
+  Produto({required this.nome, required this.valor, required this.qtdEmEstoque}){
+
+  }
 
   void realizarVenda() {
     if (qtdEmEstoque > 0) {
