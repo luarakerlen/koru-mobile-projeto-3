@@ -1,7 +1,7 @@
 class Pessoa {
-  String nome;
-  String cpf;
-  DateTime dataDeNascimento;
+  final String nome;
+  final String cpf;
+  final DateTime  dataDeNascimento;
   late int idade;
 
   Pessoa(this.nome, this.cpf, this.dataDeNascimento) {

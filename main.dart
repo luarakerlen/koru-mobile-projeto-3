@@ -50,6 +50,7 @@ main() {
     produto.realizarVenda();
   }
 
+  pularLinha();
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
@@ -65,8 +66,10 @@ main() {
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
-
+    
   // Declare aqui alguns objetos do tipo Pessoa...
+ 
+
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
   /* Testes da classe Pessoa */
