@@ -39,18 +39,18 @@ main() {
   print("Quantidade em Estoque: ${produto.qtdEmEstoque}");
 
 //Realizando venda do produto
-produto.realizarVenda();
-print('Estoque após venda: ${produto.qtdEmEstoque}');
-
+  produto.realizarVenda();
+  print('Estoque após venda: ${produto.qtdEmEstoque}');
 
 //Verificando receita gerada pelo produto
-print('Receita gerada pelo produto: ${produto.verReceitaGerada()}')
+  print('Receita gerada pelo produto: ${produto.verReceitaGerada()}');
 
 // Tentando realizar outra venda quando não há estoque
-for (int i = 0; i < 10; i++){
-  produto.realizarVenda();
-}
+  for (int i = 0; i < 10; i++) {
+    produto.realizarVenda();
+  }
 
+  pularLinha();
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
@@ -66,8 +66,10 @@ for (int i = 0; i < 10; i++){
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
-
+    
   // Declare aqui alguns objetos do tipo Pessoa...
+ 
+
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
   /* Testes da classe Pessoa */
