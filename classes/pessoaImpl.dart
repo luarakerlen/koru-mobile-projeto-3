@@ -26,10 +26,11 @@ class PessoaImpl extends Pessoa{
   }
 
   @override
-  void falar(String nome){
+  void falar(String texto){
 
-    print('${nome} diz: olá, tudo bem?');
+    print('${this.nome} diz: ${texto}');
   }
+
 
   
 }
