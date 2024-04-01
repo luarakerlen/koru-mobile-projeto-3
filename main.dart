@@ -40,7 +40,11 @@ main() {
 
 //Realizando venda do produto
 produto.realizarVenda();
-print('Estoque após venda: ${produto.qtdEmEstoque}')
+print('Estoque após venda: ${produto.qtdEmEstoque}');
+
+
+//Verificando receita gerada pelo produto
+print('Receita gerada pelo produto: ${produto.verReceitaGerada()}')
 
 // Tentando realizar outra venda quando não há estoque
 for (int i = 0; i < 10; i++){

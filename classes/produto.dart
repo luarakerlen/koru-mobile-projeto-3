@@ -18,4 +18,8 @@ void realizarVenda(){
   }
 }
 
+double verReceitaGerada(){
+  return valor * qtdVendida;
+}
+
 }
