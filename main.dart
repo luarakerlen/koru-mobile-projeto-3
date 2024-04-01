@@ -39,17 +39,16 @@ main() {
   print("Quantidade em Estoque: ${produto.qtdEmEstoque}");
 
 //Realizando venda do produto
-produto.realizarVenda();
-print('Estoque após venda: ${produto.qtdEmEstoque}');
-
+  produto.realizarVenda();
+  print('Estoque após venda: ${produto.qtdEmEstoque}');
 
 //Verificando receita gerada pelo produto
-print('Receita gerada pelo produto: ${produto.verReceitaGerada()}')
+  print('Receita gerada pelo produto: ${produto.verReceitaGerada()}');
 
 // Tentando realizar outra venda quando não há estoque
-for (int i = 0; i < 10; i++){
-  produto.realizarVenda();
-}
+  for (int i = 0; i < 10; i++) {
+    produto.realizarVenda();
+  }
 
   /* Testes da classe Produto */
 
@@ -72,15 +71,18 @@ for (int i = 0; i < 10; i++){
 
   /* Testes da classe Pessoa */
 
+  var pessoa = Pessoa("Mario", "12345678900", DateTime(1994, 10, 10));
+
   // Teste o método falar algumas vezes...
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
   // Saída esperada: Maria diz: Oi, tudo bem?
+  pessoa.falar('Oi, tudo bem?');
 
   // Teste o método maioridade algumas vezes...
   // Exemplo: pessoaA.maioridade();
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
-
+  pessoa.maioridade();
   // pularLinha();
 
   /* ------------------------------------------ */
