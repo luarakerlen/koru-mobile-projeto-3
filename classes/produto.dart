@@ -19,7 +19,7 @@ void realizarVenda(){
 }
 
 double verReceitaGerada(){
-  return valor * qtdVendida;
+  return this.valor * this.qtdVendida;
 }
 
 }
