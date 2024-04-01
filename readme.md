@@ -43,11 +43,11 @@ Neste repositório, você encontrará um um projeto em Dart contendo as classes 
 
 | Adalto Mendes                                                        | Emerson Mendes                                                    | Erika Alves                                                         | Franciéllen Sousa                                                  | Jaqueline Dreyer                                                    | Jhonny Valente                                                       |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <img src="./assets/integrantes/adalto.png" height="100" width="100"> | <img src="./assets/integrantes/eme.png" height="100" width="100"> | <img src="./assets/integrantes/erika.png" height="100" width="100"> | <img src="./assets/integrantes/fran.png" height="100" width="100"> | <img src="./assets/integrantes/jaque.png" height="100" width="100"> | <img src="./assets/integrantes/jhonny.png" height="100" width="100"> |
+| <img src="/assets/integrantes/adalto.png" height="100" width="100"> | <img src="/assets/integrantes/eme.png" height="100" width="100"> | <img src="/assets/integrantes/erika.png" height="100" width="100"> | <img src="/assets/integrantes/fran.png" height="100" width="100"> | <img src="/assets/integrantes/jaque.png" height="100" width="100"> | <img src="/assets/integrantes/jhonny.png" height="100" width="100"> |
 
 | João Rebouças                                                          | Kamila Teófilo                                                     | Leidiane Silva                                                       |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------- |
-| <img src="./assets/integrantes/reboucas.png" height="100" width="100"> | <img src="./assets/integrantes/kami.png" height="100" width="100"> | <img src="./assets/integrantes/leidi.jpeg" height="100" width="100"> |
+| <img src="/assets/integrantes/reboucas.png" height="100" width="100"> | <img src="/assets/integrantes/kami.png" height="100" width="100"> | <img src="/assets/integrantes/leidi.jpeg" height="100" width="100"> |
 
 ## Instruções
 
