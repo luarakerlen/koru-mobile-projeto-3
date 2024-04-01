@@ -32,39 +32,81 @@ main() {
   /* Declaração de objetos Produto */
 
   // Declare aqui alguns objetos do tipo Produto...
-    // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
+  // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
+  Produto produtoA = Produto(
+    nome: "Colônia Floratta Flores Secretas 75ml",
+    valor: 104.90,
+    qtdEmEstoque: 3
+  );
+  
+  Produto produtoB = Produto(
+    nome: "Colônia Floratta Red 75ml",
+    valor: 75.90,
+    qtdEmEstoque: 0
+  );
 
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
-    // Exemplo: produtoA.realizarVenda();
-    // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
-    // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
+  // Exemplo: produtoA.realizarVenda();
+  // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
+  // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
+
+  produtoA.realizarVenda();
+  produtoB.realizarVenda();
 
   // Teste o método verReceitaGerada algumas vezes...
-    // Exemplo: print(produtoA.verReceitaGerada());
-
-  // pularLinha();
+  // Exemplo: print(produtoA.verReceitaGerada());
+  // Exemplo: print(produtoA.verReceitaGerada());
+  print(produtoA.verReceitaGerada());
+  print(produtoB.verReceitaGerada());
+  pularLinha();
 
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
-
   // Declare aqui alguns objetos do tipo Pessoa...
-    // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
+  // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
+  // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
+  // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
+  Pessoa pessoaA = Pessoa(
+      nome: 'Maria',
+      cpf: '012345678900',
+      dataDeNascimento: DateTime.parse('1989-10-03'));
+
+  print('Nome: ${pessoaA.nome}');
+  print('CPF: ${pessoaA.cpf}');
 
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
-    // Exemplo: pessoaA.falar('Oi, tudo bem?');
-    // Saída esperada: Maria diz: Oi, tudo bem?
+  // Exemplo: pessoaA.falar('Oi, tudo bem?');
+  // Saída esperada: Maria diz: Oi, tudo bem?
+  pessoaA.falar('Oi, tudo bem?');
+
+  //Teste do método calcular idade
+  Pessoa pessoaC = Pessoa(
+      nome: "Maria",
+      cpf: '17435284538',
+      dataDeNascimento: DateTime.parse('1994-01-06')); //30
+  Pessoa pessoaB = Pessoa(
+      nome: "João",
+      cpf: '63528394802',
+      dataDeNascimento: DateTime.parse('1994-11-12')); //29
+  //29
+  print(pessoaC.idade);
+  print(pessoaB.idade);
+  pularLinha();
 
   // Teste o método maioridade algumas vezes...
-    // Exemplo: pessoaA.maioridade();
-    // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
-    // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
+  // Exemplo: pessoaA.maioridade();
+  // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
+  // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
+
+  pessoaC.verificarMaioridade();
+  pessoaB.verificarMaioridade();
 
   // pularLinha();
 
