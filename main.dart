@@ -38,6 +38,15 @@ main() {
   print("Valor: ${produto.valor}");
   print("Quantidade em Estoque: ${produto.qtdEmEstoque}");
 
+//Realizando venda do produto
+produto.realizarVenda();
+print('Estoque após venda: ${produto.qtdEmEstoque}')
+
+// Tentando realizar outra venda quando não há estoque
+for (int i = 0; i < 10; i++){
+  produto.realizarVenda();
+}
+
   /* Testes da classe Produto */
 
   // Teste o método realizarVenda algumas vezes...
