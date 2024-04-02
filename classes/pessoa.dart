@@ -3,8 +3,10 @@ class Pessoa {
   int? idade;
   final String cpf;
   final DateTime dataDeNascimento;
+  final Genero genero;
 
   Pessoa({
+    required this.genero,
     required this.nome,
     required this.dataDeNascimento,
     required this.cpf,
