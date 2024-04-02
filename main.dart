@@ -1,6 +1,7 @@
 // Importações dos arquivos que serão utilizados
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 /**
@@ -220,7 +221,17 @@ main() {
   maria.maioridade();
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
   joao.maioridade();
-  // pularLinha();
+  pularLinha();
 
   /* ------------------------------------------ */
+
+  final revendedorA = Revendedor(
+    matricula: '0001',
+    nome: 'Hevelise',
+    cpf: '12345678900',
+    dataDeNascimento: DateTime.parse('1994-01-06'),
+  );
+
+  revendedorA.venderProduto(produtoA);
+  print("Revendedor(a): ${revendedorA.nome}, Quantidade de produtos vendidos: ${revendedorA.produtosVendidos.length}");
 }
