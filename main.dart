@@ -234,4 +234,16 @@ main() {
 
   revendedorA.venderProduto(produtoA);
   print("Revendedor(a): ${revendedorA.nome}, Quantidade de produtos vendidos: ${revendedorA.produtosVendidos.length}");
+
+  pularLinha();
+
+  final revendedorB = Revendedor(
+    matricula: '0002',
+    nome: 'Gabriel',
+    cpf: '19876543200',
+    dataDeNascimento: DateTime.parse('2000-08-03'),
+  );
+
+  revendedorB.venderProduto(produtoB);
+  print("Revendedor(a): ${revendedorB.nome}, Quantidade de produtos vendidos: ${revendedorB.produtosVendidos.length}");
 }
