@@ -1,9 +1,9 @@
+import 'classes/pessoa.dart';
 import 'classes/produto.dart';
-import 'classes/pessoaImpl.dart';
 
 main() {
   /* Declaração de objetos Produto */
-  Produto produto = Produto(nome: 'Colônia Floratta Flores Secretas 75ml', valor: 104.90, qtdEstoque: 5);
+  Produto produto = Produto(nome: 'Colônia Floratta Flores Secretas 75ml', valor: 133.33, qtdEstoque: 5);
   produto.realizarVenda();
   produto.realizarVenda();
   print('Informações do Produto:');
@@ -14,16 +14,14 @@ main() {
   print('Produto em estoque: ${produto.qtdEstoque}');
   print('-------------------------------------------------------------------');
 
-
   /* Declaração de objetos Pessoa */
-  PessoaImpl pessoa = PessoaImpl(nome: 'Glória Maria', cpf: '01234567891', dataNascimento: DateTime(1990,01,01));
+  Pessoa pessoa = Pessoa(nome: 'Glória Maria', cpf: '01234567891', dataNascimento: DateTime(1990,01,01));
   pessoa.falar(pessoa.nome);
   pessoa.maiorIdade();
   print('-------------------------------------------------------------------');
-  PessoaImpl pessoa2 = PessoaImpl(nome: 'Aninha', cpf: '01234567892', dataNascimento: DateTime(2010,01,01));
+  Pessoa pessoa2 = Pessoa(nome: 'Aninha', cpf: '01234567892', dataNascimento: DateTime(2010,01,01));
   pessoa2.falar(pessoa2.nome);
   pessoa2.maiorIdade();
-
 }
 
 
