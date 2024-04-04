@@ -1,3 +1,5 @@
+import 'enums.dart';
+
 class Pessoa {
   final String nome;
   int? idade;

@@ -1,6 +1,7 @@
+import 'enums.dart';
 import 'pessoa.dart';
 
-class Revendedor extends Pessoa{
+class Revendedor extends Pessoa {
   final String matricula;
   List<String> produtosVendidos = [];
   double porcentagemLucro = 0.1;
@@ -10,10 +11,15 @@ class Revendedor extends Pessoa{
     required DateTime dataDeNascimento,
     required String cpf,
     required this.matricula,
-  })
-    :super(
-      nome: nome,
-      dataDeNascimento: dataDeNascimento,
-      cpf: cpf,
-    );
+    required Genero genero,
+  }) : super(
+            nome: nome,
+            dataDeNascimento: dataDeNascimento,
+            cpf: cpf,
+            genero: genero);
+
+  @override
+  void falar(String mensagem) {}
+
+  void venderProduto() {}
 }

@@ -1,4 +1,5 @@
 // Importações dos arquivos que serão utilizados
+import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'utils.dart';
@@ -69,24 +70,30 @@ main() {
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
   Pessoa pessoaA = Pessoa(
-      nome: 'Matheus',
-      dataDeNascimento: DateTime(2000, 12, 01),
-      cpf: '12345678900');
+    nome: 'Matheus',
+    dataDeNascimento: DateTime(2000, 12, 01),
+    cpf: '12345678900',
+    genero: Genero.masculino,
+  );
   Pessoa pessoaB = Pessoa(
-      nome: 'Maria',
-      dataDeNascimento: DateTime(1999, 11, 08),
-      cpf: '12345678900');
+    nome: 'Maria',
+    dataDeNascimento: DateTime(1999, 11, 08),
+    cpf: '12345678900',
+    genero: Genero.feminino,
+  );
 
   Pessoa pessoaC = Pessoa(
     nome: 'Jose',
     dataDeNascimento: DateTime(1980, 01, 15),
     cpf: '12345678900',
+    genero: Genero.outro,
   );
 
   Pessoa pessoaD = Pessoa(
     nome: 'Marcos',
     dataDeNascimento: DateTime(2010, 10, 25),
     cpf: '12345678900',
+    genero: Genero.masculino,
   );
 
   /* Testes da classe Pessoa */
