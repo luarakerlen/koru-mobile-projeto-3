@@ -1,19 +1,36 @@
-abstract class Pessoa {
+class Pessoa{
   final String nome;
   final String cpf;
   final DateTime dataNascimento;
-  late final int idade;
-  
+  late final int _idade;
+
   Pessoa({required this.nome, required this.cpf, required this.dataNascimento}){
-    idade = calcularIdade();
+   _idade = _calcularIdade();
   }
 
-  void falar(String nome);
+  @override
+  int _calcularIdade() {
+    int idade = DateTime.now().year - dataNascimento.year;
+    if (DateTime.now().month < dataNascimento.month ||
+        (DateTime.now().month == dataNascimento.month &&
+            DateTime.now().day < dataNascimento.day)) {
+      idade--;
+    }
+    return idade;
+  }
 
-  int calcularIdade();
+  @override
+  void maiorIdade(){
+    if (_idade >= 18) {
+      print('$nome tem $_idade anos, portanto é maior de idade.');
+    } else {
+      print('$nome tem $_idade anos, portanto é menor de idade.');
+    }
+  }
 
-  void maiorIdade();
+  @override
+  void falar(String texto){
 
-  
-
+    print('${this.nome} diz: ${texto}');
+  }
 }
