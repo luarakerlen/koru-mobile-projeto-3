@@ -3,14 +3,22 @@ import 'classes/produto.dart';
 
 main() {
   /* Declaração de objetos Produto */
-  Produto produto = Produto(nome: 'Colônia Floratta Flores Secretas 75ml', valor: 133.33, qtdEstoque: 5);
+  Produto produto = Produto(nome: 'Colônia Floratta Flores Secretas 75ml', valor: 133.33, qtdEstoque: 10);
+  produto.realizarVenda();
+  produto.realizarVenda();
+  produto.realizarVenda();
+  produto.realizarVenda();
+  produto.realizarVenda();
+  produto.realizarVenda();
+  produto.realizarVenda();
+  produto.realizarVenda();
   produto.realizarVenda();
   produto.realizarVenda();
   print('Informações do Produto:');
   print('Total de itens comprados: ${produto.qtdVendida}');
   print('-------------------------------------------------------------------');
-  print('Valor do produto: ${produto.valor} | Valor total da compra: ${produto.verReceitaGerada()}');
-  print('Receita gerada com o produto: ${produto.verReceitaGerada()}');
+  print('Valor do produto: ${produto.valor} | Valor total da compra: ${produto.verReceitaGerada().toStringAsFixed(2)}');
+  print('Receita gerada com o produto: ${produto.verReceitaGerada().toStringAsFixed(2)}');
   print('Produto em estoque: ${produto.qtdEstoque}');
   print('-------------------------------------------------------------------');
 
