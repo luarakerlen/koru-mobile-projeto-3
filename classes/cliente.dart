@@ -44,7 +44,7 @@ class Cliente extends Pessoa {
   }
 
   void comprarProduto(Produto produto, Revendedor revendedor) {
-    if(dinheiro >= produto.valor){
+    if(dinheiro >= produto.valor && produto.qtdEmEstoque > 0){
       _dinheiroSuficiente;
       print('Cliente $nome comprou o produto ${produto.nome}.');
     } else {
