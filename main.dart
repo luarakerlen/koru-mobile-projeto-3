@@ -1,6 +1,7 @@
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'utils.dart';
+import 'enums.dart';
 
 main() {
   /* Declaração de objetos Produto */
@@ -28,9 +29,9 @@ main() {
 
   /* Declaração de objetos Pessoa */
 
-  Pessoa pessoaB = Pessoa("Joaquina", "95663323585", DateTime.parse("2006-03-27")); // já fez aniversário este ano -> maior de idade
-  Pessoa pessoaC = Pessoa("Antonio", "95663323585", DateTime.parse("2006-08-03")); // não fez aniversário este ano -> menor de idade 
-  Pessoa pessoaA = Pessoa("Carla", "12345678900", DateTime.parse("1987-05-15"));
+  Pessoa pessoaB = Pessoa("Joaquina", "95663323585", DateTime.parse("2006-03-27"), Genero.Feminino); // já fez aniversário este ano -> maior de idade
+  Pessoa pessoaC = Pessoa("Antonio", "95663323585", DateTime.parse("2006-08-03"), Genero.Masculino); // não fez aniversário este ano -> menor de idade 
+  Pessoa pessoaA = Pessoa("Carla", "12345678900", DateTime.parse("1987-05-15"), Genero.Outro);
 
   /* Testes da classe Pessoa */
   // Teste o método falar algumas vezes...
