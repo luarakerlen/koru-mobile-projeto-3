@@ -1,6 +1,7 @@
 import 'enums.dart';
 import 'pessoa.dart';
 import 'produto.dart';
+import 'revendedor.dart';
 
 class Cliente extends Pessoa {
   double dinheiro;
@@ -29,6 +30,16 @@ class Cliente extends Pessoa {
       print('$nome agora você possui ${dinheiro.toStringAsFixed(2)} reais.');
     } else {
       print('$nome não é permitido fazer esse tipo de Operação.');
+    }
+  }
+
+  void comprarProduto(Produto produto, Revendedor revendedor) {
+    if(dinheiro >= produto.valor){
+      revendedor.venderProduto;
+      dinheiro -= produto.valor;
+      produtosComprados.add(produto);
+    } else {
+      print('Cliente $Cliente.nome não possui dinheiro suficiente para comprar o produto $produto.');
     }
   }
 }
