@@ -1,16 +1,19 @@
+import '../enums.dart';
+
 class Pessoa {
   final String nome;
   final String cpf;
   final DateTime dataDeNascimento;
+  final Genero genero;
 
   // Construtor
-  Pessoa(this.nome, this.cpf, this.dataDeNascimento) {
-    _idade = calcularIdade();
+  Pessoa(this.nome, this.cpf, this.dataDeNascimento, this.genero) {
+    _idade = _calcularIdade();
   }
 
   late int _idade; //fix: troca de int? indade por late int idade -gabrielmattano
 
-  int calcularIdade() {
+  int _calcularIdade() {
     if (DateTime.now().month < dataDeNascimento.month ||
         (DateTime.now().month == dataDeNascimento.month &&
             DateTime.now().day < dataDeNascimento.day)) {
