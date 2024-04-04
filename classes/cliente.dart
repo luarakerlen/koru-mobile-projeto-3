@@ -33,23 +33,22 @@ class Cliente extends Pessoa {
     }
   }
 
-  void _dinheiroSuficiente(Produto produto, Revendedor revendedor){
-      revendedor.venderProduto(produto);
-      produtosComprados.add(produto);
-      dinheiro -= produto.valor;
-  } 
-  
-  void _dinheiroInsuficiente(Produto produto, Revendedor revendedor){
-      print('Cliente $nome não possui dinheiro suficiente para comprar o produto ${produto.nome}.');
+  void comprarProduto(Produto produto, Revendedor revendedor) {
+    dinheiro >= produto.valor 
+      ? _efetuarCompra(produto, revendedor)
+      : _recusarCompra(produto.nome);
   }
 
-  void comprarProduto(Produto produto, Revendedor revendedor) {
-    if(dinheiro >= produto.valor && produto.qtdEmEstoque > 0){
-      _dinheiroSuficiente;
-      print('Cliente $nome comprou o produto ${produto.nome}.');
-    } else {
-      _dinheiroInsuficiente;
-    }
-    print(produtosComprados);
+  void _efetuarCompra(Produto produto, Revendedor revendedor){
+      revendedor.venderProduto(produto);
+
+      if(produto.qtdEmEstoque > 0){
+        produtosComprados.add(produto);
+        dinheiro -= produto.valor;
+      }
+  } 
+  
+  void _recusarCompra(String nomeProduto){
+      print('Cliente $nome não possui dinheiro suficiente para comprar o produto $nomeProduto.');
   }
 }
