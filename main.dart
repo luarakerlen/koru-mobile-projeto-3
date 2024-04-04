@@ -1,9 +1,9 @@
-import 'classes/produtoImpl.dart';
+import 'classes/produto.dart';
 import 'classes/pessoaImpl.dart';
 
 main() {
   /* Declaração de objetos Produto */
-  ProdutoImpl produto = ProdutoImpl(nome: 'Colônia Floratta Flores Secretas 75ml', valor: 104.90, qtdEstoque: 5);
+  Produto produto = Produto(nome: 'Colônia Floratta Flores Secretas 75ml', valor: 104.90, qtdEstoque: 5);
   produto.realizarVenda();
   produto.realizarVenda();
   print('Informações do Produto:');
