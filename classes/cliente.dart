@@ -1,6 +1,7 @@
 import 'enums.dart';
 import 'pessoa.dart';
 import 'produto.dart';
+import 'revendedor.dart';
 
 class Cliente extends Pessoa {
   double dinheiro;
@@ -30,5 +31,24 @@ class Cliente extends Pessoa {
     } else {
       print('$nome não é permitido fazer esse tipo de Operação.');
     }
+  }
+
+  void comprarProduto(Produto produto, Revendedor revendedor) {
+    dinheiro >= produto.valor 
+      ? _efetuarCompra(produto, revendedor)
+      : _recusarCompra(produto.nome);
+  }
+
+  void _efetuarCompra(Produto produto, Revendedor revendedor){
+      revendedor.venderProduto(produto);
+
+      if(produto.qtdEmEstoque > 0){
+        produtosComprados.add(produto);
+        dinheiro -= produto.valor;
+      }
+  } 
+  
+  void _recusarCompra(String nomeProduto){
+      print('Cliente $nome não possui dinheiro suficiente para comprar o produto $nomeProduto.');
   }
 }
