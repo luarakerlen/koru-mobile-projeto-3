@@ -1,5 +1,6 @@
 // Importações dos arquivos que serão utilizados
 
+import 'classes/cliente.dart';
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
@@ -90,4 +91,8 @@ main() {
   pularLinha();
   pessoa2.maioridade();
   /* ------------------------------------------ */
+pularLinha();
+Cliente cliente1 =Cliente('João', '5362578725', DateTime.parse('2024-03-21'), Genero.masculino);
+cliente1.adicionarDinheiro(250.00);
+cliente1.adicionarDinheiro(50.00);
 }
