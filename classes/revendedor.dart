@@ -11,7 +11,10 @@ class Revendedor extends Pessoa {
     required super.nome, 
     required super.cpf, 
     required super.dataDeNascimento
-  });
+  }) {
+    // TODO: implement Revendedor
+    throw UnimplementedError();
+  }
 
   @override
   void fala(String fala) {
