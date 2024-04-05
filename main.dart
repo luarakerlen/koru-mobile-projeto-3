@@ -1,6 +1,7 @@
 import 'classes/enums.dart';
 import 'classes/produto.dart';
 import 'classes/pessoa.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 void main() {
@@ -72,6 +73,25 @@ void main() {
   imprimirReceitaGerada(produto2.verReceitaGerada());
   inserirSeparador();
 
-  // imprimirNomeClasse('Revendedor');
-  // imprimirNomeClasse('Cliente');
+  imprimirNomeClasse('Revendedor');
+  Revendedor revendedor1 = Revendedor(
+    nome: 'Eduardo',
+    cpf: '000.123.456.789',
+    dataDeNascimento: DateTime.parse('1992-02-21'),
+    matricula: '508726',
+    genero: Genero.Outro,
+  );
+  revendedor1.falar('Olá! Temos promoções!');
+  revendedor1.venderProduto(produto1);
+  inserirSeparador();
+  
+  Revendedor revendedor2 = Revendedor(
+    nome: 'Angelina',
+    cpf: '456.789.012.34',
+    dataDeNascimento: DateTime.parse('1982-10-21'),
+    matricula: '505744',
+    genero: Genero.Feminino,
+  );
+  revendedor2.falar('Sou sua consultora Boti!');
+  revendedor2.venderProduto(produto2);
 }
