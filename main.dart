@@ -1,4 +1,5 @@
 // Importações dos arquivos que serão utilizados
+import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
@@ -126,8 +127,10 @@ main() {
   // Exemplo: print(produtoA.verReceitaGerada());
 
   pularLinha();
-  print('A receita gerada pelo produto ${produtoA.nomeProduto} é: ${produtoA.verReceitaGerada()} reais');
-  print('A receita gerada pelo produto ${produtoB.nomeProduto} é: ${produtoB.verReceitaGerada()} reais');
+  print(
+      'A receita gerada pelo produto ${produtoA.nomeProduto} é: ${produtoA.verReceitaGerada()} reais');
+  print(
+      'A receita gerada pelo produto ${produtoB.nomeProduto} é: ${produtoB.verReceitaGerada()} reais');
   pularLinha();
 
   // pularLinha();
@@ -144,54 +147,64 @@ main() {
   final maria = Pessoa(
     nome: 'Maria',
     cpf: '12345678900',
+    genero: Genero.Feminino,
     dataDeNascimento: DateTime.parse('1994-01-06'),
   );
   final joao = Pessoa(
     nome: 'João',
     cpf: '98345678900',
+    genero: Genero.Masculino,
     dataDeNascimento: DateTime.parse('1990-10-04'),
   );
   final ana = Pessoa(
     nome: 'Ana',
     cpf: '87654321900',
+    genero: Genero.Feminino,
     dataDeNascimento: DateTime.parse('1998-07-15'),
   );
 
   final pedro = Pessoa(
     nome: 'Pedro',
     cpf: '76543219800',
+    genero: Genero.Masculino,
     dataDeNascimento: DateTime.parse('1985-03-22'),
   );
   final carla = Pessoa(
     nome: 'Carla',
     cpf: '65432198700',
+    genero: Genero.Feminino,
     dataDeNascimento: DateTime.parse('1992-11-30'),
   );
   final rafaela = Pessoa(
     nome: 'Rafaela',
     cpf: '54321987600',
+    genero: Genero.Outro,
     dataDeNascimento: DateTime.parse('1980-09-10'),
   );
 
   final leandro = Pessoa(
     nome: 'Leandro',
     cpf: '43219876500',
+    genero: Genero.Outro,
     dataDeNascimento: DateTime.parse('1976-05-25'),
   );
   final fernanda = Pessoa(
     nome: 'Fernanda',
     cpf: '32198765400',
+    genero: Genero.Feminino,
     dataDeNascimento: DateTime.parse('1991-12-08'),
   );
   final mariana = Pessoa(
     nome: 'Mariana',
     cpf: '21987654300',
+    genero: Genero.Outro,
     dataDeNascimento: DateTime.parse('1987-02-18'),
   );
 
   final gabriel = Pessoa(
     nome: 'Gabriel',
     cpf: '19876543200',
+    genero: Genero.Outro,
     dataDeNascimento: DateTime.parse('2000-08-03'),
   );
 
@@ -233,7 +246,8 @@ main() {
   );
 
   revendedorA.venderProduto(produtoA);
-  print("Revendedor(a): ${revendedorA.nome}, Quantidade de produtos vendidos: ${revendedorA.produtosVendidos.length}");
+  print(
+      "Revendedor(a): ${revendedorA.nome}, Quantidade de produtos vendidos: ${revendedorA.produtosVendidos.length}");
 
   pularLinha();
 
@@ -245,5 +259,6 @@ main() {
   );
 
   revendedorB.venderProduto(produtoB);
-  print("Revendedor(a): ${revendedorB.nome}, Quantidade de produtos vendidos: ${revendedorB.produtosVendidos.length}");
+  print(
+      "Revendedor(a): ${revendedorB.nome}, Quantidade de produtos vendidos: ${revendedorB.produtosVendidos.length}");
 }
