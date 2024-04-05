@@ -1,10 +1,14 @@
+
+import 'enums.dart';
+
 class Pessoa {
   String nome;
   String cpf;
   DateTime dataDeNascimento;
   int idade = 0;
+  Genero generos;
 
-  Pessoa(this.nome, this.cpf, this.dataDeNascimento) {
+  Pessoa(this.nome, this.cpf, this.dataDeNascimento, this.generos) {
     _calcularIdade();
   }
 
@@ -30,4 +34,17 @@ class Pessoa {
       print("${this.nome} tem ${this.idade}, portanto é menor de idade");
     }
   }
+
+  String GeneroString(Genero genero) {
+  switch (genero) {
+    case Genero.feminino:
+      return 'Feminino';
+    case Genero.masculino:
+      return 'Masculino';
+    case Genero.outro:
+      return 'Outro';
+    default:
+      return 'Desconhecido';
+  }
+}
 }
