@@ -1,5 +1,6 @@
 // Importações dos arquivos que serão utilizados
 
+import 'classes/cliente.dart';
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
@@ -71,9 +72,13 @@ main() {
   // Declare aqui alguns objetos do tipo Pessoa...
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
   Pessoa pessoa1 =
-      Pessoa("maria", "452464545452", DateTime.parse("1980-04-12"),Genero.feminino);
-
-  Pessoa pessoa2 = Pessoa("jose", "121212121212", DateTime.parse("2012-12-12"),Genero.masculino);
+    Pessoa("maria", "452464545452", DateTime.parse("1980-04-12"),Genero.feminino);
+    pularLinha();
+   
+  Pessoa pessoa2 =
+       Pessoa("jose", "121212121212", DateTime.parse("2012-12-12"),Genero.masculino);
+   
+    
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
@@ -82,6 +87,7 @@ main() {
   pessoa1.falar("oi,tudo bem, qual shampoo recomenda para meus cabelos?");
   pularLinha();
   pessoa2.falar("Olá tudo bem? Tem o perfume Gold Desodorante Colônia");
+  
   // Teste o método maioridade algumas vezes...
   // Exemplo: pessoaA.maioridade();
   // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
@@ -89,5 +95,13 @@ main() {
   pessoa1.maioridade();
   pularLinha();
   pessoa2.maioridade();
+  pularLinha();
+  Cliente cliente2 = Cliente("francisco", "34525254689", DateTime.parse("1960-12-25"),Genero.masculino);
+  Cliente cliente1 = Cliente("rosa", "12121212121", DateTime.parse("1990-10-20"),Genero.feminino);
+  pularLinha();
+  cliente1.falar("Quero ganhar o  Balm Hidratante Labial Nativa Spa Lilac");
+  pularLinha();
+  cliente2.falar("quero experimentar o Malbec Ultra Bleu Desodorante Colônia");
+  
   /* ------------------------------------------ */
 }
