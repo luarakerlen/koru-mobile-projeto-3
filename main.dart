@@ -1,8 +1,8 @@
 // Importações dos arquivos que serão utilizados
 
+import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
-import 'classes/cliente.dart';
 import 'utils.dart';
 
 /**
@@ -71,9 +71,9 @@ main() {
   // Declare aqui alguns objetos do tipo Pessoa...
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
   Pessoa pessoa1 =
-      Pessoa("maria", "452464545452", DateTime.parse("1980-04-12"));
+      Pessoa("maria", "452464545452", DateTime.parse("1980-04-12"),Genero.feminino);
 
-  Pessoa pessoa2 = Pessoa("jose", "121212121212", DateTime.parse("2012-12-12"));
+  Pessoa pessoa2 = Pessoa("jose", "121212121212", DateTime.parse("2012-12-12"),Genero.masculino);
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
