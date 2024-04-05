@@ -1,5 +1,6 @@
 import 'pessoa.dart';
 import 'produto.dart';
+import 'enums.dart';
 
 class Revendedor extends Pessoa {
   final String matricula;
@@ -8,13 +9,11 @@ class Revendedor extends Pessoa {
 
   Revendedor({
     required this.matricula, 
-    required super.nome, 
-    required super.cpf, 
-    required super.dataDeNascimento
-  }) {
-    // TODO: implement Revendedor
-    throw UnimplementedError();
-  }
+    required String nome, 
+    required String cpf, 
+    required DateTime dataDeNascimento,
+    required Genero genero
+  }) : super(nome: nome, cpf: cpf, dataDeNascimento: dataDeNascimento, genero: genero);
 
   @override
   void fala(String fala) {
