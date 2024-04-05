@@ -1,12 +1,15 @@
+import 'enums.dart';
+
 class Pessoa {
   final String nome;
   final String cpf;
   final DateTime dataDeNascimento;
+  final Genero genero;
   late int idade;
 
   //construtor
   Pessoa(
-      {required this.nome, required this.cpf, required this.dataDeNascimento}) {
+      {required this.nome, required this.cpf, required this.dataDeNascimento, required this.genero,}) {
     idade = calcularIdade();
   }
   //inserir metodo calcularIdade (retorno: int)
@@ -20,6 +23,7 @@ class Pessoa {
         : ("$nome tem $idade, portanto é menor de idade!"));
     print(verificar);
   }
+
   //método falar
   void falar(String fala) {
     print('$nome diz: $fala');
