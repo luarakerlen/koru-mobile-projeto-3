@@ -242,6 +242,7 @@ main() {
     matricula: '0001',
     nome: 'Hevelise',
     cpf: '12345678900',
+    genero: Genero.Feminino,
     dataDeNascimento: DateTime.parse('1994-01-06'),
   );
 
@@ -255,6 +256,7 @@ main() {
     matricula: '0002',
     nome: 'Gabriel',
     cpf: '19876543200',
+    genero: Genero.Masculino,
     dataDeNascimento: DateTime.parse('2000-08-03'),
   );
 
