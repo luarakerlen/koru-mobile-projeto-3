@@ -1,6 +1,7 @@
 // Importações dos arquivos que serão utilizados
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 /**
@@ -66,9 +67,8 @@ main() {
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
-    
+
   // Declare aqui alguns objetos do tipo Pessoa...
- 
 
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
@@ -87,6 +87,11 @@ main() {
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
   pessoa.maioridade();
   // pularLinha();
+  pularLinha();
+  
+
+  
+
 
   /* ------------------------------------------ */
 }
