@@ -55,8 +55,8 @@ main() {
   // Teste o método verReceitaGerada algumas vezes...
   // Exemplo: print(produtoA.verReceitaGerada());
   // Exemplo: print(produtoA.verReceitaGerada());
-  print(produtoA.verReceitaGerada());
-  print(produtoB.verReceitaGerada());
+  print(fixarDuasCasasDecimais(produtoA.verReceitaGerada()));
+  print(fixarDuasCasasDecimais(produtoB.verReceitaGerada()));
   pularLinha();
 
   /* ------------------------------------------ */
