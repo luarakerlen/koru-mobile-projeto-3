@@ -2,6 +2,8 @@
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
+import 'classes/cliente.dart';
 import 'utils.dart';
 
 /**
@@ -36,16 +38,12 @@ main() {
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   Produto produtoA = Produto(
-    nome: "Colônia Floratta Flores Secretas 75ml",
-    valor: 104.90,
-    qtdEmEstoque: 3
-  );
-  
-  Produto produtoB = Produto(
-    nome: "Colônia Floratta Red 75ml",
-    valor: 75.90,
-    qtdEmEstoque: 0
-  );
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
+
+  Produto produtoB =
+      Produto(nome: "Colônia Floratta Red 75ml", valor: 75.90, qtdEmEstoque: 0);
 
   /* Testes da classe Produto */
 
@@ -113,7 +111,38 @@ main() {
   pessoaC.verificarMaioridade();
   pessoaB.verificarMaioridade();
 
-  // pularLinha();
+  pularLinha();
+
+  //teste do método falar - Revendedor
+  
+  Revendedor revendedorB = Revendedor(
+    nome: 'Ariel',
+    cpf: '12345678910',
+    dataDeNascimento: DateTime(1980, 6, 10),
+    genero: Genero.Outro,
+  );
+  Revendedor revendedorC = Revendedor(
+    nome: 'Maria',
+    cpf: '12345678920',
+    dataDeNascimento: DateTime(1980, 4, 20),
+    genero: Genero.Feminino,
+  );
+
+  revendedorA.falar("Temos promoções!");
+  revendedorB.falar("Temos promoções!");
+  revendedorC.falar("Temos promoções!");
+  pularLinha();
+
+  //teste método cliente falar
+  Cliente clienteA = Cliente(
+    nome: 'João',
+    cpf: '12345678900',
+    dataDeNascimento: DateTime(1980, 5, 15),
+    genero: Genero.Masculino,
+  );
+
+  clienteA.falar("Quero comprar um produto.");
+  /* ------------------------------------------ */
 
   /* ------------------------------------------ */
 }
