@@ -7,10 +7,10 @@ class Pessoa {
   //construtor
   Pessoa(
       {required this.nome, required this.cpf, required this.dataDeNascimento}) {
-    idade = calcularIdade();
+    idade = _calcularIdade();
   }
   //inserir metodo calcularIdade (retorno: int)
-  int calcularIdade() {
+  int _calcularIdade() {
     return DateTime.now().difference(dataDeNascimento).inDays ~/ 365.toInt();
   }
 
@@ -20,6 +20,7 @@ class Pessoa {
         : ("$nome tem $idade, portanto é menor de idade!"));
     print(verificar);
   }
+
   //método falar
   void falar(String fala) {
     print('$nome diz: $fala');
