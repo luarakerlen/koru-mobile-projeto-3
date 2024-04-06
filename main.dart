@@ -4,6 +4,7 @@ import 'classes/cliente.dart';
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 /**
@@ -104,4 +105,8 @@ main() {
   cliente2.falar("quero experimentar o Malbec Ultra Bleu Desodorante Colônia");
   
   /* ------------------------------------------ */
-}
+  Revendedor func1 = Revendedor("Marcelo", "12345179068", DateTime.parse("1950-01-02"),Genero.masculino,"101220");
+  func1.falar("Olá boa tarde, tudo bem? já conhece nossos produtos? temos varias fragrâncias."); 
+  Revendedor func2 = Revendedor("Antonela", "02131586547", DateTime.parse("1980-05-15"), Genero.feminino,"10420");
+  func2.falar("Olá bom dia tuo bem! me chamo Antonela e irei aprensentar nosso catálago");
+ }
