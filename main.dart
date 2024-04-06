@@ -3,6 +3,7 @@ import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
+import 'classes/cliente.dart';
 import 'utils.dart';
 
 /**
@@ -113,7 +114,7 @@ main() {
   pularLinha();
 
   //teste do método falar - Revendedor
- 
+  
   Revendedor revendedorB = Revendedor(
     nome: 'Ariel',
     cpf: '12345678910',
@@ -131,6 +132,17 @@ main() {
   revendedorB.falar("Temos promoções!");
   revendedorC.falar("Temos promoções!");
   pularLinha();
+
+  //teste método cliente falar
+  Cliente clienteA = Cliente(
+    nome: 'João',
+    cpf: '12345678900',
+    dataDeNascimento: DateTime(1980, 5, 15),
+    genero: Genero.Masculino,
+  );
+
+  clienteA.falar("Quero comprar um produto.");
+  /* ------------------------------------------ */
 
   /* ------------------------------------------ */
 }
