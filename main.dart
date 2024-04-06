@@ -35,16 +35,12 @@ main() {
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   Produto produtoA = Produto(
-    nome: "Colônia Floratta Flores Secretas 75ml",
-    valor: 104.90,
-    qtdEmEstoque: 3
-  );
-  
-  Produto produtoB = Produto(
-    nome: "Colônia Floratta Red 75ml",
-    valor: 75.90,
-    qtdEmEstoque: 0
-  );
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
+
+  Produto produtoB =
+      Produto(nome: "Colônia Floratta Red 75ml", valor: 75.90, qtdEmEstoque: 0);
 
   /* Testes da classe Produto */
 
@@ -111,4 +107,20 @@ main() {
   // pularLinha();
 
   /* ------------------------------------------ */
+  /* Testes da classe Cliente */
+  //Teste do método comprarProduto
+  //cliente com dinheiro
+  Cliente clienteX = Cliente(
+      nome: 'Ana',
+      cpf: '20202929',
+      dataDeNascimento: DateTime.parse('1996-18-06'),
+      dinheiro: 330.70);
+  clienteX.comprarProduto(produtoA, revendedorA);
+//cliente sem dinheiro
+  Cliente clienteY = Cliente(
+      nome: 'João',
+      cpf: '20202929',
+      dataDeNascimento: DateTime.parse('2005-10-03'),
+      dinheiro: 2.50);
+  clienteY.comprarProduto(produtoB, revendedorA);
 }
