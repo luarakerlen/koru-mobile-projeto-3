@@ -112,7 +112,30 @@ main() {
 
   pularLinha();
 
-  
+  //teste do método falar - Revendedor
+  Revendedor revendedorA = Revendedor(
+    nome: 'João',
+    cpf: '12345678900',
+    dataDeNascimento: DateTime(1980, 5, 15),
+    genero: Genero.Masculino,
+  );
+  Revendedor revendedorB = Revendedor(
+    nome: 'Ariel',
+    cpf: '12345678910',
+    dataDeNascimento: DateTime(1980, 6, 10),
+    genero: Genero.Outro,
+  );
+  Revendedor revendedorC = Revendedor(
+    nome: 'Maria',
+    cpf: '12345678920',
+    dataDeNascimento: DateTime(1980, 4, 20),
+    genero: Genero.Feminino,
+  );
+
+  revendedorA.falar("Temos promoções!");
+  revendedorB.falar("Temos promoções!");
+  revendedorC.falar("Temos promoções!");
+  pularLinha();
 
   /* ------------------------------------------ */
 }
