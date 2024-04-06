@@ -104,4 +104,8 @@ main() {
   cliente2.falar("quero experimentar o Malbec Ultra Bleu Desodorante Colônia");
   
   /* ------------------------------------------ */
+pularLinha();
+Cliente cliente1 =Cliente('João', '5362578725', DateTime.parse('2024-03-21'), Genero.masculino);
+cliente1.adicionarDinheiro(250.00);
+cliente1.adicionarDinheiro(50.00);
 }
