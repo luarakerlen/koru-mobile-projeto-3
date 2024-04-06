@@ -4,6 +4,7 @@ import 'classes/cliente.dart';
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 /**
@@ -102,10 +103,17 @@ main() {
   cliente1.falar("Quero ganhar o  Balm Hidratante Labial Nativa Spa Lilac");
   pularLinha();
   cliente2.falar("quero experimentar o Malbec Ultra Bleu Desodorante Colônia");
+
+  pularLinha();
+  Cliente cliente3 =Cliente('João', '5362578725', DateTime.parse('2024-03-21'), Genero.masculino);
+  cliente3.adicionarDinheiro(250.00);
+  cliente3.adicionarDinheiro(50.00);
   
   /* ------------------------------------------ */
-pularLinha();
-Cliente cliente1 =Cliente('João', '5362578725', DateTime.parse('2024-03-21'), Genero.masculino);
-cliente1.adicionarDinheiro(250.00);
-cliente1.adicionarDinheiro(50.00);
-}
+
+  Revendedor func1 = Revendedor("Marcelo", "12345179068", DateTime.parse("1950-01-02"),Genero.masculino,"101220");
+  func1.falar("Olá boa tarde, tudo bem? já conhece nossos produtos? temos varias fragrâncias."); 
+  Revendedor func2 = Revendedor("Antonela", "02131586547", DateTime.parse("1980-05-15"), Genero.feminino,"10420");
+  func2.falar("Olá bom dia tuo bem! me chamo Antonela e irei aprensentar nosso catálago");
+ }
+
