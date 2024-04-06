@@ -113,12 +113,7 @@ main() {
   pularLinha();
 
   //teste do método falar - Revendedor
-  Revendedor revendedorA = Revendedor(
-    nome: 'João',
-    cpf: '12345678900',
-    dataDeNascimento: DateTime(1980, 5, 15),
-    genero: Genero.Masculino,
-  );
+ 
   Revendedor revendedorB = Revendedor(
     nome: 'Ariel',
     cpf: '12345678910',
