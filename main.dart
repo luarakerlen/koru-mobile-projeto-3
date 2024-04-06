@@ -35,16 +35,12 @@ main() {
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   Produto produtoA = Produto(
-    nome: "Colônia Floratta Flores Secretas 75ml",
-    valor: 104.90,
-    qtdEmEstoque: 3
-  );
-  
-  Produto produtoB = Produto(
-    nome: "Colônia Floratta Red 75ml",
-    valor: 75.90,
-    qtdEmEstoque: 0
-  );
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
+
+  Produto produtoB =
+      Produto(nome: "Colônia Floratta Red 75ml", valor: 75.90, qtdEmEstoque: 0);
 
   /* Testes da classe Produto */
 
@@ -95,9 +91,7 @@ main() {
       nome: "João",
       cpf: '63528394802',
       dataDeNascimento: DateTime.parse('1994-11-12')); //29
-  //29
-  print(pessoaC.idade);
-  print(pessoaB.idade);
+
   pularLinha();
 
   // Teste o método maioridade algumas vezes...

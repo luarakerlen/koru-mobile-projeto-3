@@ -2,12 +2,12 @@ class Pessoa {
   final String nome;
   final String cpf;
   final DateTime dataDeNascimento;
-  late int idade;
+  late int _idade;
 
   //construtor
   Pessoa(
       {required this.nome, required this.cpf, required this.dataDeNascimento}) {
-    idade = _calcularIdade();
+    _idade = _calcularIdade();
   }
   //inserir metodo calcularIdade (retorno: int)
   int _calcularIdade() {
@@ -15,9 +15,9 @@ class Pessoa {
   }
 
   void verificarMaioridade() {
-    String verificar = (idade >= 18
-        ? ("$nome tem $idade, portanto é maior de idade!")
-        : ("$nome tem $idade, portanto é menor de idade!"));
+    String verificar = (_idade >= 18
+        ? ("$nome tem $_idade, portanto é maior de idade!")
+        : ("$nome tem $_idade, portanto é menor de idade!"));
     print(verificar);
   }
 
