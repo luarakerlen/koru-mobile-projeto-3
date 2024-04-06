@@ -2,6 +2,7 @@
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 /**
@@ -36,16 +37,12 @@ main() {
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   Produto produtoA = Produto(
-    nome: "Colônia Floratta Flores Secretas 75ml",
-    valor: 104.90,
-    qtdEmEstoque: 3
-  );
-  
-  Produto produtoB = Produto(
-    nome: "Colônia Floratta Red 75ml",
-    valor: 75.90,
-    qtdEmEstoque: 0
-  );
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
+
+  Produto produtoB =
+      Produto(nome: "Colônia Floratta Red 75ml", valor: 75.90, qtdEmEstoque: 0);
 
   /* Testes da classe Produto */
 
@@ -113,7 +110,9 @@ main() {
   pessoaC.verificarMaioridade();
   pessoaB.verificarMaioridade();
 
-  // pularLinha();
+  pularLinha();
+
+  
 
   /* ------------------------------------------ */
 }
