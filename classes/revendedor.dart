@@ -1,4 +1,5 @@
 import 'pessoa.dart';
+import 'produto.dart';
 
 class Revendedor extends Pessoa {
   final String matricula;
@@ -25,4 +26,10 @@ class Revendedor extends Pessoa {
 
     print('Revendedor $nome diz: $mensagem');
   }
+ 
+ void venderProduto(Produto produto) {
+    produto.realizarVenda(); 
+    produtosVendidos.add(produto);
+  }
+
 }
