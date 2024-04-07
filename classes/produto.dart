@@ -5,9 +5,8 @@ class Produto {
   int qtdVendida = 0;
 
   //construtor
-  Produto({required this.nome, required this.valor, required this.qtdEmEstoque}){
-
-  }
+  Produto(
+      {required this.nome, required this.valor, required this.qtdEmEstoque});
 
   void realizarVenda() {
     if (qtdEmEstoque > 0) {
@@ -19,7 +18,7 @@ class Produto {
     }
   }
 
-  double verReceitaGerada(){
-    return valor*qtdVendida;
+  double verReceitaGerada() {
+    return valor * qtdVendida;
   }
 }
