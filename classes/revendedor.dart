@@ -2,16 +2,8 @@ import 'pessoa.dart';
 import 'produto.dart';
 import 'enums.dart';
 
-
 class Revendedor extends Pessoa {
-  
   List<Produto> produtosVendidos = <Produto>[];
-  
-  //método venderProduto
-  void venderProduto(Produto produto) {
-    produto.realizarVenda();
-    produtosVendidos.add(produto);
-  }
 
   //método falar
   @override
@@ -26,5 +18,11 @@ class Revendedor extends Pessoa {
       default:
         print("Pessoa revendedora $nome diz: $fala");
     }
+  }
+
+  //método venderProduto
+  void venderProduto(Produto produto) {
+    produto.realizarVenda();
+    produtosVendidos.add(produto);
   }
 }
