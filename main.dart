@@ -1,5 +1,6 @@
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 import 'enums.dart';
 
@@ -39,6 +40,44 @@ main() {
    pessoaA.falar("oi tudo bem");
    pularLinha();
 
+   Revendedor revendedorA = Revendedor(
+    "Luara Kerlen", 
+    "22233344455",
+    DateTime.parse("1999-06-19"),
+    Genero.Feminino,
+    "0007"
+  );
+  
+   Revendedor revendedorB = Revendedor(
+    "Flavia Lopes",
+    "11133344422", 
+    DateTime.parse("2000-03-09"), 
+    Genero.Outro, 
+    "1000"
+  );
+   Revendedor revendedorC = Revendedor(
+    "Guilherme Bastos", 
+    "66677788899", 
+    DateTime.parse("2001-08-23"), 
+    Genero.Masculino, 
+    "0807"
+  );
+   Revendedor revendedorD = Revendedor(
+    "Gabriel Mattano", 
+    "55544433322", 
+    DateTime.parse("1995-06-17"), 
+    Genero.Masculino, 
+    "3333"
+  );
+  
+   revendedorA.falar("Temos promoções");
+   revendedorB.falar("Temos promoções");
+   revendedorC.falar("Temos promoções");
+   revendedorD.falar("Temos promoções");
+
+   pularLinha();
+   pularLinha();
+   
     // Teste o método maioridade algumas vezes...
 
     pessoaA.maioridade();
