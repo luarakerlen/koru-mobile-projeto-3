@@ -35,8 +35,7 @@ class Revendedor extends Pessoa {
 
   void venderProduto(Produto produto) {
     if (produto.qtdEstoque > 0) {
-      produto.realizarVenda();
-      _produtosVendidos.add(produto);
+      produto.realizarVenda(); _produtosVendidos.add(produto);
       print(_produtosVendidos[0].nome);
     } else {
       print("Produto sem estoque no momento!");
