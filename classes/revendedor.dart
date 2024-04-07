@@ -14,6 +14,7 @@ class Revendedor extends Pessoa {
     required super.genero,
     required this.matricula});
 
+  
   @override
   void falar(String texto) {
     String titulo;
