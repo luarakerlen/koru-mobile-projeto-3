@@ -107,5 +107,8 @@ main() {
     cliente2.adicionarDinheiro(50.00);
 
     pularLinha();
+
+    //Teste do método falar() de cliente.dart:
+    cliente4.falar("Quero comprar um produto.");
   
 }
