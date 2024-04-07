@@ -1,7 +1,12 @@
 import 'enums.dart';
 import 'pessoa.dart';
+import 'produto.dart';
+import 'revendedor.dart';
 
 class Cliente extends Pessoa {
+
+  List<Produto> produtosComprados = [];
+
   //método falar
   @override
   void falar(String fala) {
