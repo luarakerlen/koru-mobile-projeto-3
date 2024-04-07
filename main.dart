@@ -143,6 +143,14 @@ main() {
 
   /* ------------------------------------------ */
   /* Testes da classe Cliente */
+
+  void main() {
+  Cliente clienteComDinheiro = Cliente(100);
+  print("Maria tem ${clienteComDinheiro.dinheiro} em dinheiro.");
+
+  clienteComDinheiro.adicionarDinheiro(22.0);
+  clienteComDinheiro.adicionarDinheiro(null); // Testando com null
+}
   //Teste do método comprarProduto
   //cliente com dinheiro
   Cliente clienteX = Cliente(
