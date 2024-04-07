@@ -22,5 +22,10 @@ Cliente(super.nome,
 	                }
                 }
 
-        
+
+// Refatoração do método falar() de Pessoa.dart
+@override
+void falar(String fala){
+    print("Cliente $nome diz: $fala.");
+  }
 }
