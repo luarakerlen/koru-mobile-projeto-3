@@ -95,19 +95,4 @@ main() {
     pessoaC.maioridade();
 
     pularLinha();
-
-    //Adicionar Clientes
-    Cliente cliente1 = Cliente("Gabriel", "123458900", DateTime.parse("2000-02-01"), Genero.Masculino);
-    Cliente cliente2 = Cliente("Flavia", "26430596312", DateTime.parse("1994-02-01"), Genero.Feminino);
-    Cliente cliente3 = Cliente("Guilherme M.", "59762158964", DateTime.parse("1998-02-01"), Genero.Outro);
-    Cliente cliente4 = Cliente("Guilherme", "45889632012", DateTime.parse("1996-02-01"), Genero.Masculino);
-
-    //Teste do método Adicionar Cliente
-    cliente1.adicionarDinheiro(37.50);
-    cliente2.adicionarDinheiro(50.00);
-
-
-
-
-  
 }
