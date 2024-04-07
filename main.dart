@@ -1,6 +1,7 @@
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
+import 'classes/cliente.dart';
 import 'utils.dart';
 import 'enums.dart';
 
@@ -108,4 +109,14 @@ main() {
 
     pularLinha();
   
+    cliente3.comprarProduto(produto6, revendedorB);
+    cliente3.adicionarDinheiro(200);
+    pularLinha();
+    cliente3.comprarProduto(produto6, revendedorB);
+    pularLinha();
+    print("A lista de produtos comprados de ${cliente3.nome} é: ");
+    
+    cliente3.produtosComprados.forEach((element) {
+      print(element.nome);
+});
 }

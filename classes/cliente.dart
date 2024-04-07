@@ -28,4 +28,27 @@ Cliente(super.nome,
 void falar(String fala){
     print("Cliente $nome diz: $fala.");
   }
+
+  // Validação para o método comprarProduto()
+bool saldoInsuficiente(dinheiro, Produto){
+  return dinheiro < Produto.valor;
+}
+
+//Mostrar saldo pos compra
+
+
+
+//Criação do método comprarProduto()
+void comprarProduto(Produto produto, Revendedor revendedor) {
+  if (saldoInsuficiente(dinheiro, produto)) {
+    print("$nome não possui dinheiro suficiente para efetuar a compra de ${produto.nome}");
+    return;
+    }
+    else {
+      revendedor.venderProduto(produto);
+      produtosComprados.add(produto);
+      dinheiro = dinheiro - produto.valor;
+      print("O saldo atual de $nome é R\$${dinheiro.toStringAsFixed(2)}");
+    }
+  }
 }
