@@ -49,13 +49,22 @@ main() {
 
   //Add dinheiro
   cliente.adicionarDinheiro(200.0);
- print('-------------------------------------');
+  print('-------------------------------------');
 
- //compra produto
- cliente.comprarProduto(produto, revendedor3);
- revendedor3.venderProduto(produto);
-  print(' Saldo final cliente: ${cliente.dinheiro}');
+ //aqui o cliente compra o produto e nele já tem um método que chama o revendedor.venderProduto
+  cliente.comprarProduto(produto, revendedor3);
+  print('${cliente.produtosComprados}');
+
+  //nessa chamada você está novamente fazendo o calculo de aumentar +1 vendido e diminuir -1 estoque
+  //então não é errado chamar novamente, pois ocorrerá o calculo da venda do revendedor
+  //mas não ocorrerá nada com o cliente
+  revendedor3.venderProduto(produto);
+  
+  
+  print('Saldo final cliente: ${cliente.dinheiro}');
   print('${produto.valor}');
+  print('estoque: ${produto.qtdEstoque}');
+  print('vendido: ${produto.qtdVendida}');
 
   // print('-------------------------------------------------------------------');
   //

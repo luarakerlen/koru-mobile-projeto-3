@@ -6,18 +6,19 @@ class Produto {
 
   Produto({required this.nome, required this.valor, required this.qtdEstoque});
 
-  @override
+  
   void realizarVenda() {
-    if (qtdEstoque <= 0) {
-      print('No momento não possuímos o produto $nome em estoque.');
-    } else {
-      qtdEstoque -= 1;
+    if (qtdEstoque >= 0) {
       qtdVendida += 1;
+      qtdEstoque -= 1;
       print('Compra de $qtdVendida $nome realizada com sucesso!');
+      
+    } else {
+      print('No momento não possuímos o produto $nome em estoque.');
     }
   }
 
-  @override
+  
   double verReceitaGerada() {
     return qtdVendida * valor;
   }
