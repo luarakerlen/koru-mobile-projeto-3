@@ -18,6 +18,8 @@ main() {
 
   /* Testes da classe Produto */
 
+    
+
     produto1.realizarVenda();
     pularLinha();
     produto3.realizarVenda();
@@ -76,6 +78,14 @@ main() {
    revendedorD.falar("Temos promoções");
 
    pularLinha();
+
+   revendedorB.venderProduto(produto5);
+   revendedorB.venderProduto(produto5);
+   pularLinha();
+   print("A lista de ${revendedorB.nome} é: ");
+   revendedorB.produtosVendidos.forEach((element) {
+      print(element.nome);
+   });
    pularLinha();
    
     // Teste o método maioridade algumas vezes...

@@ -26,4 +26,11 @@ class Revendedor extends Pessoa {
       }
 
     }
+
+    void venderProduto(Produto item){
+      if(item.qtdEmEstoque > 0){
+        produtosVendidos.add(item);
+      };
+      item.realizarVenda();
+    }
 }
