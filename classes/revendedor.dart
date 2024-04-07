@@ -10,4 +10,27 @@ class Revendedor extends Pessoa {
     List<Produto> produtosVendidos = [];
     double porcentagemLucro = 0.25;
 
+    @override
+    void falar(String fala){
+
+      switch(genero){
+        case Genero.Masculino: 
+          print("Revedendor $nome diz: $fala");
+          break;
+        case Genero.Feminino:
+          print("Revedendora $nome diz: $fala");
+          break;
+        case Genero.Outro:
+          print("Pessoa revedendora $nome diz: $fala");
+          break;
+      }
+
+    }
+
+    void venderProduto(Produto item){
+      if(item.qtdEmEstoque > 0){
+        produtosVendidos.add(item);
+      };
+      item.realizarVenda();
+    }
 }
