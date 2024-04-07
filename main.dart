@@ -34,13 +34,13 @@ main() {
 
   //Add dinheiro
   print('Cliente tem o seguinte saldo ${cliente.dinheiro} antes do depósito');
-  cliente.adicionarDinheiro(50.00);
+  cliente.adicionarDinheiro(0.00);
   pularLinha();
 
   //aqui o cliente compra o produto e nele já tem um método que chama o revendedor.venderProduto
-  cliente.comprarProduto(produto, revendedor3);
+  print('valor produto: ${produto.valor}  Saldo final cliente: ${cliente.dinheiro.toStringAsFixed(2)}');
 
-  print('Saldo final cliente: ${cliente.dinheiro.toStringAsFixed(2)}');
+  cliente.comprarProduto(produto, revendedor3);
 
   print('estoque: ${produto.qtdEstoque}');
   print('vendido: ${produto.qtdVendida}');
