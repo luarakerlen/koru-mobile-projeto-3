@@ -113,6 +113,7 @@ main() {
       dataDeNascimento: DateTime.parse('1991-12-21'),
       matricula: '123456789');
   print('Matrícula do revendedor: ${revendedorA.matricula}');
+  print('Porcentagem de lucro: ${(revendedorA.porcentagemLucro*100).toStringAsFixed(0)}%');
 
   /* ------------------------------------------ */
 }
