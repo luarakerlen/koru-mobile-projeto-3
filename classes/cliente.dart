@@ -21,7 +21,7 @@ class Cliente extends Pessoa {
 
   void adicionarDinheiro(double valor) {
     dinheiro += valor;
-    print('${nome} agora possui ${dinheiro.toStringAsFixed(2)} reais.');
+    print('${nome} após o depósito de $valor agora possui ${dinheiro.toStringAsFixed(2)} reais.');
   }
 
   void comprarProduto(Produto produto, Revendedor revendedor) {
