@@ -11,7 +11,8 @@ class Pessoa {
     _idade = _calcularIdade();
   }
 
-  late int _idade; //fix: troca de int? indade por late int idade -gabrielmattano
+  late int
+      _idade; //fix: troca de int? indade por late int idade -gabrielmattano
 
   int _calcularIdade() {
     if (DateTime.now().month < dataDeNascimento.month ||
@@ -25,16 +26,16 @@ class Pessoa {
   }
 
   // criacao metodo falar carlabudne
-  void falar(String fala){
+  void falar(String fala) {
     print("$nome diz: $fala ");
   }
 
   //Criação do Método Maioridade
-  void maioridade (){
-    if (_idade >= 18){
+  void maioridade() {
+    if (_idade >= 18) {
       print("$nome tem $_idade anos, portanto é maior de idade");
-      } else{
-          print("$nome tem $_idade anos, portanto é menor de idade");
-    }   
+    } else {
+      print("$nome tem $_idade anos, portanto é menor de idade");
+    }
   }
 }
