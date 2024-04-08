@@ -2,6 +2,7 @@
 import 'classes/cliente.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 /**
@@ -87,6 +88,11 @@ main() {
   // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
   pessoa.maioridade();
   // pularLinha();
+  pularLinha();
+  
+
+  
+
 
   /* ------------------------------------------ */
 

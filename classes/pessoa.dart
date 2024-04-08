@@ -1,10 +1,11 @@
 class Pessoa {
   final String nome;
   final String cpf;
-  final DateTime  dataDeNascimento;
+  final DateTime dataDeNascimento;
+  final String Genero;
   late int idade;
 
-  Pessoa(this.nome, this.cpf, this.dataDeNascimento) {
+  Pessoa(this.nome, this.cpf, this.dataDeNascimento , this.Genero) {
     idade = calcularIdade();
   }
 
