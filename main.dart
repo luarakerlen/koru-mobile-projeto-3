@@ -108,15 +108,43 @@ main() {
     cliente2.adicionarDinheiro(50.00);
 
     pularLinha();
-  
+
+    //Teste do método falar() de cliente.dart:
+    cliente4.falar("Quero comprar um produto.");
+    pularLinha();
+
+  //Teste do método comprarProduto():
     cliente3.comprarProduto(produto6, revendedorB);
     cliente3.adicionarDinheiro(200);
     pularLinha();
+
     cliente3.comprarProduto(produto6, revendedorB);
     pularLinha();
+
     print("A lista de produtos comprados de ${cliente3.nome} é: ");
-    
+    cliente3.produtosComprados.forEach((element) {
+    print(element.nome);});
+    pularLinha();
+
+    cliente3.adicionarDinheiro(200);
+    cliente3.comprarProduto(produto4, revendedorA);
+    pularLinha();
+
+    print("A lista de produtos comprados de ${cliente3.nome} é: ");
     cliente3.produtosComprados.forEach((element) {
       print(element.nome);
-});
+      });
+    
+    pularLinha();
+    print("A lista de produtos vendidos de ${revendedorB.nome} é: ");
+    revendedorB.produtosVendidos.forEach((element) {
+      print(element.nome);
+   });
+
+    pularLinha();
+    print("A lista de produtos vendidos de ${revendedorA.nome} é: ");
+    revendedorA.produtosVendidos.forEach((element) {
+      print(element.nome);
+   });
+
 }

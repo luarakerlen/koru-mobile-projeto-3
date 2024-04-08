@@ -29,14 +29,10 @@ void falar(String fala){
     print("Cliente $nome diz: $fala.");
   }
 
-  // Validação para o método comprarProduto()
+// Validação para o método comprarProduto()
 bool saldoInsuficiente(dinheiro, Produto){
   return dinheiro < Produto.valor;
 }
-
-//Mostrar saldo pos compra
-
-
 
 //Criação do método comprarProduto()
 void comprarProduto(Produto produto, Revendedor revendedor) {
