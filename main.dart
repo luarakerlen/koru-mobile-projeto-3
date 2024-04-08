@@ -1,6 +1,10 @@
 // Importações dos arquivos que serão utilizados
+import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
+import 'classes/revendedor.dart';
+import 'classes/cliente.dart';
 import 'utils.dart';
 
 /**
@@ -35,16 +39,18 @@ main() {
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   Produto produtoA = Produto(
-    nome: "Colônia Floratta Flores Secretas 75ml",
-    valor: 104.90,
-    qtdEmEstoque: 3
-  );
-  
-  Produto produtoB = Produto(
-    nome: "Colônia Floratta Red 75ml",
-    valor: 75.90,
-    qtdEmEstoque: 0
-  );
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
+
+  Produto produtoB =
+      Produto(nome: "Colônia Floratta Red 75ml", valor: 75.90, qtdEmEstoque: 0);
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
+
+  Produto produtoB =
+      Produto(nome: "Colônia Floratta Red 75ml", valor: 75.90, qtdEmEstoque: 0);
 
   /* Testes da classe Produto */
 
@@ -59,8 +65,8 @@ main() {
   // Teste o método verReceitaGerada algumas vezes...
   // Exemplo: print(produtoA.verReceitaGerada());
   // Exemplo: print(produtoA.verReceitaGerada());
-  print(produtoA.verReceitaGerada());
-  print(produtoB.verReceitaGerada());
+  print(fixarDuasCasasDecimais(produtoA.verReceitaGerada()));
+  print(fixarDuasCasasDecimais(produtoB.verReceitaGerada()));
   pularLinha();
 
   /* ------------------------------------------ */
@@ -74,10 +80,12 @@ main() {
   Pessoa pessoaA = Pessoa(
       nome: 'Maria',
       cpf: '012345678900',
-      dataDeNascimento: DateTime.parse('1989-10-03'));
+      dataDeNascimento: DateTime.parse('1989-10-03'),
+      genero: Genero.Feminino);
 
   print('Nome: ${pessoaA.nome}');
   print('CPF: ${pessoaA.cpf}');
+  print('Genero: ${Genero.Feminino.name}');
 
   /* Testes da classe Pessoa */
 
@@ -86,18 +94,17 @@ main() {
   // Saída esperada: Maria diz: Oi, tudo bem?
   pessoaA.falar('Oi, tudo bem?');
 
-  //Teste do método calcular idade
   Pessoa pessoaC = Pessoa(
       nome: "Maria",
       cpf: '17435284538',
-      dataDeNascimento: DateTime.parse('1994-01-06')); //30
+      dataDeNascimento: DateTime.parse('1994-01-06'), //30 anos
+      genero: Genero.Feminino);
   Pessoa pessoaB = Pessoa(
       nome: "João",
       cpf: '63528394802',
-      dataDeNascimento: DateTime.parse('1994-11-12')); //29
-  //29
-  print(pessoaC.idade);
-  print(pessoaB.idade);
+      dataDeNascimento: DateTime.parse('1994-11-12'), //29 anos
+      genero: Genero.Masculino);
+
   pularLinha();
 
   // Teste o método maioridade algumas vezes...
@@ -109,6 +116,61 @@ main() {
   pessoaB.verificarMaioridade();
 
   // pularLinha();
+  /* Testes da classe Revendedor */
+  Revendedor revendedorA = Revendedor(
+      nome: 'jhonny',
+      cpf: '123456',
+      dataDeNascimento: DateTime.parse('1991-12-21'),
+      matricula: '123456789');
+  print('Matrícula do revendedor: ${revendedorA.matricula}');
+  pularLinha();
+
+  //teste do método falar - Revendedor
+
+  Revendedor revendedorB = Revendedor(
+    nome: 'Ariel',
+    cpf: '12345678910',
+    dataDeNascimento: DateTime(1980, 6, 10),
+    genero: Genero.Outro,
+  );
+  Revendedor revendedorC = Revendedor(
+    nome: 'Maria',
+    cpf: '12345678920',
+    dataDeNascimento: DateTime(1980, 4, 20),
+    genero: Genero.Feminino,
+  );
+
+  revendedorA.falar("Temos promoções!");
+  revendedorB.falar("Temos promoções!");
+  revendedorC.falar("Temos promoções!");
+  pularLinha();
+
+  //teste método cliente falar
+  Cliente clienteA = Cliente(
+    nome: 'João',
+    cpf: '12345678900',
+    dataDeNascimento: DateTime(1980, 5, 15),
+    genero: Genero.Masculino,
+  );
+
+  clienteA.falar("Quero comprar um produto.");
+  /* ------------------------------------------ */
 
   /* ------------------------------------------ */
+  /* Testes da classe Cliente */
+  //Teste do método comprarProduto
+  //cliente com dinheiro
+  Cliente clienteX = Cliente(
+      nome: 'Ana',
+      cpf: '20202929',
+      dataDeNascimento: DateTime.parse('1996-18-06'),
+      dinheiro: 330.70);
+  clienteX.comprarProduto(produtoA, revendedorA);
+//cliente sem dinheiro
+  Cliente clienteY = Cliente(
+      nome: 'João',
+      cpf: '20202929',
+      dataDeNascimento: DateTime.parse('2005-10-03'),
+      dinheiro: 2.50);
+  clienteY.comprarProduto(produtoB, revendedorA);
 }
