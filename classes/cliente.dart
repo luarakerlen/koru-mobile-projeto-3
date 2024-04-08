@@ -5,7 +5,12 @@ import 'revendedor.dart';
 
 class Cliente extends Pessoa {
 
+  double dinheiro;
+
   List<Produto> produtosComprados = [];
+
+  Cliente({required super.nome, required super.cpf, required super.dataDeNascimento, this.dinheiro = 0.0});
+
 
   //método falar
   @override
@@ -24,4 +29,14 @@ class Cliente extends Pessoa {
           '$nome não possui dinheiro suficiente para comprar o produto ${produto.nome}');
     }
   }
+  
+    void adicionarDinheiro(double? valor) {
+    if (valor != null) {
+      dinheiro += valor;
+      print("$nome adicionou $valor à sua carteira. Agora você tem $dinheiro em dinheiro.");
+    } else {
+      print("Nenhum valor adicionado à carteira");
+    }
+  }
 }
+
