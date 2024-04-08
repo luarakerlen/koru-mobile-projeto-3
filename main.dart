@@ -3,6 +3,7 @@ import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
+import 'classes/revendedor.dart';
 import 'classes/cliente.dart';
 import 'utils.dart';
 
@@ -38,6 +39,12 @@ main() {
   // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
 
   Produto produtoA = Produto(
+      nome: "Colônia Floratta Flores Secretas 75ml",
+      valor: 104.90,
+      qtdEmEstoque: 3);
+
+  Produto produtoB =
+      Produto(nome: "Colônia Floratta Red 75ml", valor: 75.90, qtdEmEstoque: 0);
       nome: "Colônia Floratta Flores Secretas 75ml",
       valor: 104.90,
       qtdEmEstoque: 3);
@@ -108,6 +115,14 @@ main() {
   pessoaC.verificarMaioridade();
   pessoaB.verificarMaioridade();
 
+  // pularLinha();
+  /* Testes da classe Revendedor */
+  Revendedor revendedorA = Revendedor(
+      nome: 'jhonny',
+      cpf: '123456',
+      dataDeNascimento: DateTime.parse('1991-12-21'),
+      matricula: '123456789');
+  print('Matrícula do revendedor: ${revendedorA.matricula}');
   pularLinha();
 
   //teste do método falar - Revendedor
