@@ -1,4 +1,3 @@
-
 import 'enums.dart';
 
 class Pessoa {
@@ -34,17 +33,4 @@ class Pessoa {
       print("${this.nome} tem ${this.idade}, portanto é menor de idade");
     }
   }
-
-  String GeneroString(Genero genero) {
-  switch (genero) {
-    case Genero.feminino:
-      return 'Feminino';
-    case Genero.masculino:
-      return 'Masculino';
-    case Genero.outro:
-      return 'Outro';
-    default:
-      return 'Desconhecido';
-  }
-}
 }
