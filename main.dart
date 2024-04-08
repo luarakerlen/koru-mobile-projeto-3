@@ -75,7 +75,8 @@ main() {
 
   /* Testes da classe Pessoa */
 
-  var pessoa = Pessoa("Mario", "12345678900", DateTime(1994, 10, 10));
+  var pessoa =
+      Pessoa('Maria', '12345678900', DateTime(1994, 10, 19), 'feminino');
 
   // Teste o método falar algumas vezes...
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
@@ -89,21 +90,19 @@ main() {
   pessoa.maioridade();
   // pularLinha();
   pularLinha();
-  
-
-  
-
 
   /* ------------------------------------------ */
 
-  var cliente1 = Cliente("Gon Freecs", "12345678950", DateTime(1999, 10, 19));
+  var cliente1 =
+      Cliente("Gon Freecs", "12345678950", DateTime(1999, 10, 19), 'neutro');
 
   cliente1.maioridade();
   cliente1.adicionarDinheiro(100);
   print(cliente1.dinheiro);
   cliente1.falar("Primeiro vem pedra");
 
-  var cliente2 = Cliente("Killua Zoldyck", "44346795175", DateTime(2007, 1, 19),
+  var cliente2 = Cliente(
+      "Killua Zoldyck", "44346795175", DateTime(2007, 1, 19), 'feminino',
       dinheiro: 1000000.99);
 
   cliente2.maioridade();
