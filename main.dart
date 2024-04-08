@@ -1,6 +1,10 @@
 // Importações dos arquivos que serão utilizados
+
+import 'classes/cliente.dart';
+import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
+import 'classes/revendedor.dart';
 import 'utils.dart';
 
 /**
@@ -30,43 +34,97 @@ import 'utils.dart';
 
 main() {
   /* Declaração de objetos Produto */
-
-  // Declare aqui alguns objetos do tipo Produto...
-    // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
-
-
-  /* Testes da classe Produto */
-
-  // Teste o método realizarVenda algumas vezes...
-    // Exemplo: produtoA.realizarVenda();
-    // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
-    // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
-
-  // Teste o método verReceitaGerada algumas vezes...
-    // Exemplo: print(produtoA.verReceitaGerada());
-
   // pularLinha();
+  // Declare aqui alguns objetos do tipo Produto...
+  // Exemplo: Produto produtoA = Produto("Colônia Floratta Flores Secretas 75ml", 104.90, 3);
+  Produto parfumLily = Produto("parfumLily", 291.51, 2);
+  /* Testes da classe Produto */
+  Produto bleu = Produto("Ultra Bleu Desodorante Colônia 100ml", 179.90, 1);
+  pularLinha();
+  Produto verano =
+      Produto("Verano en Firenze Eau de Parfum Floral Frutal75 ml", 164.00, 3);
+  // Teste o método realizarVenda algumas vezes...
+  // Exemplo: produtoA.realizarVenda();
+  // Saída esperada 1: Compra de um produto Colônia Floratta Flores Secretas 75ml realizada com sucesso!
+  // Saída esperada 2: No momento não possuímos o produto Colônia Floratta Flores Secretas 75ml em estoque.
+  parfumLily.realizarVenda();
+  pularLinha();
+  bleu.realizarVenda();
+  bleu.realizarVenda();
+  pularLinha();
+  verano.realizarVenda();
+  verano.realizarVenda();
+  // Teste o método verReceitaGerada algumas vezes...
+  // Exemplo: print(produtoA.verReceitaGerada());
+  print(
+      "Produto ${parfumLily.nome} gerou receita de: ${parfumLily.verReceitaGerada().toStringAsFixed(2)}");
+  pularLinha();
+  print(
+      "Produto ${bleu.nome} gerou receita de: ${bleu.verReceitaGerada().toStringAsFixed(2)}");
+
+  pularLinha();
+  print(
+      "Produto ${verano.nome} gerou receita de: ${verano.verReceitaGerada().toStringAsFixed(2)}");
 
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
 
   // Declare aqui alguns objetos do tipo Pessoa...
-    // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
+  // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
+  Pessoa pessoa1 = Pessoa(
+      "maria", "452464545452", DateTime.parse("1980-04-12"), Genero.feminino);
+  pularLinha();
 
+  Pessoa pessoa2 = Pessoa(
+      "jose", "121212121212", DateTime.parse("2012-12-12"), Genero.masculino);
 
   /* Testes da classe Pessoa */
 
   // Teste o método falar algumas vezes...
-    // Exemplo: pessoaA.falar('Oi, tudo bem?');
-    // Saída esperada: Maria diz: Oi, tudo bem?
+  // Exemplo: pessoaA.falar('Oi, tudo bem?');
+  // Saída esperada: Maria diz: Oi, tudo bem?
+  pessoa1.falar("oi,tudo bem, qual shampoo recomenda para meus cabelos?");
+  pularLinha();
+  pessoa2.falar("Olá tudo bem? Tem o perfume Gold Desodorante Colônia");
 
   // Teste o método maioridade algumas vezes...
-    // Exemplo: pessoaA.maioridade();
-    // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
-    // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
+  // Exemplo: pessoaA.maioridade();
+  // Saída esperada 1: Maria tem 30 anos, portanto é maior de idade.
+  // Saída esperada 2: João tem 14 anos, portanto é menor de idade.
+  pessoa1.maioridade();
+  pularLinha();
+  pessoa2.maioridade();
+  pularLinha();
+  Cliente cliente1 = Cliente(
+      "rosa", "12121212121", DateTime.parse("1990-10-20"), Genero.feminino);
+  Cliente cliente2 = Cliente("francisco", "34525254689",
+      DateTime.parse("1960-12-25"), Genero.masculino);
+  pularLinha();
+  cliente1.falar("Quero ganhar o  Balm Hidratante Labial Nativa Spa Lilac");
+  pularLinha();
+  cliente2.falar("quero experimentar o Malbec Ultra Bleu Desodorante Colônia");
 
-  // pularLinha();
+  pularLinha();
+  Cliente cliente3 = Cliente(
+      'João', '5362578725', DateTime.parse('2024-03-21'), Genero.masculino);
+  cliente3.adicionarDinheiro(250.00);
+  cliente3.adicionarDinheiro(50.00);
 
   /* ------------------------------------------ */
+
+  Revendedor func1 = Revendedor("Marcelo", "12345179068",
+      DateTime.parse("1950-01-02"), Genero.masculino, "101220");
+  func1.falar(
+      "Olá boa tarde, tudo bem? já conhece nossos produtos? temos varias fragrâncias.");
+  Revendedor func2 = Revendedor("Antonela", "02131586547",
+      DateTime.parse("1980-05-15"), Genero.feminino, "10420");
+  func2.falar(
+      "Olá bom dia tuo bem! me chamo Antonela e irei aprensentar nosso catálago");
+
+  pularLinha();
+  Cliente cliente4 = Cliente(
+      'Vinicius', '3322578212', DateTime.parse('2024-01-16'), Genero.masculino);
+  cliente4.adicionarDinheiro(350.00);
+  cliente4.comprarProduto(verano, func1);
 }
