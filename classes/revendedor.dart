@@ -1,20 +1,18 @@
+import 'enums.dart';
 import 'pessoa.dart';
+import 'produto.dart';
 
 class Revendedor extends Pessoa {
   final String matricula;
 
-  Revendedor(
-      {required super.nome,
-      required super.cpf,
-      required super.dataDeNascimento,
-      required this.matricula});
-}
+  Revendedor({
+    required super.nome,
+    required super.cpf,
+    required super.dataDeNascimento,
+    required super.genero,
+    required this.matricula,
+  });
 
-import 'pessoa.dart';
-import 'produto.dart';
-import 'enums.dart';
-
-class Revendedor extends Pessoa {
   List<Produto> produtosVendidos = <Produto>[];
 
   //método falar

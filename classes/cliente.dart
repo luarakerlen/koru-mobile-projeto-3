@@ -9,7 +9,13 @@ class Cliente extends Pessoa {
 
   List<Produto> produtosComprados = [];
 
-  Cliente({required super.nome, required super.cpf, required super.dataDeNascimento, this.dinheiro = 0.0});
+  Cliente({
+    required super.nome,
+    required super.cpf,
+    required super.dataDeNascimento,
+    required super.genero,
+    this.dinheiro = 0.0,
+  });
 
 
   //método falar
