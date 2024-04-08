@@ -5,14 +5,15 @@ import 'revendedor.dart';
 class Cliente extends Pessoa {
 
   double dinheiro;
-  List<Produto> produtosComprados = <Produto>[];
+  List<Produto> _produtosComprados = <Produto>[];
 
   Cliente(
       {required super.nome,
         required super.cpf,
         required super.dataNascimento,
         required super.genero,
-        required this.dinheiro}) {}
+        this.dinheiro = 0,});
+/// Dinheiro precisava ser opcional, mas caso recebesse como atributo nullable tinha possibilidade de ser null, causando problema na hora de adicionar o dinheiro, com ele tendo padrão como "0" ainda fica opcional no construtor mas caso não seja recebido não dará problema para adições futuras
 
   @override
   void falar(String texto) {
@@ -28,11 +29,12 @@ class Cliente extends Pessoa {
     if (dinheiro >= produto.valor && produto.qtdEstoque > 0) {
       revendedor.venderProduto(produto);
       dinheiro -= produto.valor;
-      produtosComprados.add(produto);
+      _produtosComprados.add(produto);
     } else {
       print(
           "$nome não possui saldo suficiente ou o produto ${produto.nome} não tem estoque suficiente para a compra.");
     }
+      print("O total de produtos comprados pelo ${nome} foi: ${_produtosComprados.length}");
   }
 }
 
