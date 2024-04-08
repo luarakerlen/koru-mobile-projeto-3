@@ -3,7 +3,7 @@ import 'produto.dart';
 
 class Revendedor extends Pessoa {
   final String matricula;
-  List produtosVendidos;
+  List<Produto> produtosVendidos = []
   double porcentagemLucro;
 
   Revendedor(super.nome, super.cpf, super.dataDeNascimento, super.genero,
