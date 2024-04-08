@@ -158,6 +158,23 @@ main() {
 
   /* ------------------------------------------ */
   /* Testes da classe Cliente */
+
+  Cliente clienteComDinheiro = Cliente(
+    nome: 'Fran',
+    cpf: '01234567890',
+    dataDeNascimento: DateTime.parse('1999-10-01'),
+    dinheiro: 10);
+
+  clienteComDinheiro.adicionarDinheiro(22.0);
+  clienteComDinheiro.adicionarDinheiro(null); 
+
+  Cliente clienteSemDinheiro = Cliente(
+    nome: 'Kamila',
+    cpf: '1234578900',
+    dataDeNascimento: DateTime.parse('1997-11-15'));
+
+  clienteSemDinheiro.adicionarDinheiro(10.0);
+
   //Teste do método comprarProduto
   //cliente com dinheiro
   Cliente clienteX = Cliente(
