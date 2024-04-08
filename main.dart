@@ -125,9 +125,7 @@ main() {
   );
 
   print('Matrícula do revendedor: ${revendedorA.matricula}');
-  pularLinha();
-
-  //teste do método falar - Revendedor
+  print('Porcentagem de lucro: ${(revendedorA.porcentagemLucro*100).toStringAsFixed(0)}%');
 
   Revendedor revendedorB = Revendedor(
     nome: 'Ariel',
@@ -173,7 +171,7 @@ main() {
   );
 
   clienteComDinheiro.adicionarDinheiro(22.0);
-  clienteComDinheiro.adicionarDinheiro(null); 
+  clienteComDinheiro.adicionarDinheiro(null);
 
   Cliente clienteSemDinheiro = Cliente(
     nome: 'Kamila',

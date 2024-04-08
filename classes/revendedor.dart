@@ -4,14 +4,15 @@ import 'produto.dart';
 
 class Revendedor extends Pessoa {
   final String matricula;
+  final double porcentagemLucro;
 
-  Revendedor({
-    required super.nome,
-    required super.cpf,
-    required super.dataDeNascimento,
-    required super.genero,
-    required this.matricula,
-  });
+  Revendedor(
+      {required super.nome,
+      required super.cpf,
+      required super.dataDeNascimento,
+      required super.genero,
+      required this.matricula,
+      }) : porcentagemLucro = 0.2;
 
   List<Produto> produtosVendidos = <Produto>[];
 
