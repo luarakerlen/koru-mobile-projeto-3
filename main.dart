@@ -1,4 +1,5 @@
 // Importações dos arquivos que serão utilizados
+import 'classes/cliente.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'utils.dart';
@@ -66,9 +67,8 @@ main() {
   /* ------------------------------------------ */
 
   /* Declaração de objetos Pessoa */
-    
+
   // Declare aqui alguns objetos do tipo Pessoa...
- 
 
   // Exemplo: Pessoa pessoaA = Pessoa('Maria', '12345678900', 1994);
 
@@ -89,4 +89,19 @@ main() {
   // pularLinha();
 
   /* ------------------------------------------ */
+
+  var cliente1 = Cliente("Gon Freecs", "12345678950", DateTime(1999, 10, 19));
+
+  cliente1.maioridade();
+  cliente1.adicionarDinheiro(100);
+  print(cliente1.dinheiro);
+  cliente1.falar("Primeiro vem pedra");
+
+  var cliente2 = Cliente("Killua Zoldyck", "44346795175", DateTime(2007, 1, 19),
+      dinheiro: 1000000.99);
+
+  cliente2.maioridade();
+  cliente2.adicionarDinheiro(1300);
+  print(cliente2.dinheiro);
+  cliente2.falar("KOROSU!!!");
 }
