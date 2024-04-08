@@ -113,7 +113,7 @@ main() {
     cliente4.falar("Quero comprar um produto.");
     pularLinha();
 
-  //Teste do método comprarProduto():
+    //Teste do método comprarProduto():
     cliente3.comprarProduto(produto6, revendedorB);
     cliente3.adicionarDinheiro(200);
     pularLinha();
