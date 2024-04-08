@@ -3,6 +3,7 @@ import 'classes/cliente.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
+import 'enums.dart';
 import 'utils.dart';
 
 /**
@@ -76,7 +77,7 @@ main() {
   /* Testes da classe Pessoa */
 
   var pessoa =
-      Pessoa('Maria', '12345678900', DateTime(1994, 10, 19), 'feminino');
+      Pessoa('Maria', '12345678900', DateTime(1994, 10, 19), Genero.Feminino);
 
   // Teste o método falar algumas vezes...
   // Exemplo: pessoaA.falar('Oi, tudo bem?');
@@ -93,8 +94,8 @@ main() {
 
   /* ------------------------------------------ */
 
-  var cliente1 =
-      Cliente("Gon Freecs", "12345678950", DateTime(1999, 10, 19), 'neutro');
+  var cliente1 = Cliente(
+      "Gon Freecs", "12345678950", DateTime(1999, 10, 19), Genero.Outros);
 
   cliente1.maioridade();
   cliente1.adicionarDinheiro(100);
@@ -102,7 +103,7 @@ main() {
   cliente1.falar("Primeiro vem pedra");
 
   var cliente2 = Cliente(
-      "Killua Zoldyck", "44346795175", DateTime(2007, 1, 19), 'feminino',
+      "Killua Zoldyck", "44346795175", DateTime(2007, 1, 19), Genero.Feminino,
       dinheiro: 1000000.99);
 
   cliente2.maioridade();

@@ -1,3 +1,4 @@
+import '../enums.dart';
 import 'pessoa.dart';
 import 'produto.dart';
 
@@ -13,11 +14,11 @@ class Revendedor extends Pessoa {
   void falar(String mensagem) {
     String pronome;
     switch (genero) {
-      case 'maculino':
+      case Genero.Masculino:
         pronome = 'o';
         break;
 
-      case 'feminino':
+      case Genero.Feminino:
         pronome = 'a';
         break;
       default:

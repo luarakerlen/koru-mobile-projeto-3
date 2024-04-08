@@ -1,8 +1,10 @@
+import '../enums.dart';
+
 class Pessoa {
   final String nome;
   final String cpf;
   final DateTime dataDeNascimento;
-  final String genero;
+  final Genero genero;
   late int idade;
 
   Pessoa(this.nome, this.cpf, this.dataDeNascimento, this.genero) {

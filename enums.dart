@@ -1,6 +1,1 @@
-enum genero{ 
-  Feminino,
-  Masculino,
-  Outros }
-
-
+enum Genero { Feminino, Masculino, Outros }
