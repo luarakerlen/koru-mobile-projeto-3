@@ -144,7 +144,6 @@ main() {
   /* ------------------------------------------ */
   /* Testes da classe Cliente */
 
-  void main() {
   Cliente clienteComDinheiro = Cliente(
     nome: 'Fran',
     cpf: '01234567890',
