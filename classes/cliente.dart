@@ -18,9 +18,9 @@ class Cliente extends Pessoa {
   }
 
   void comprarProduto(Produto produto, Revendedor revendedor) {
-    if (dinheiro >= produto.valor) {
-      revendedor.adicionarProdutoVendido(produto);
-      dinheiro -= produto.valor;
+    if (dinheiro != null && dinheiro! >= produto.valor) {
+      revendedor.venderProduto(produto);
+      dinheiro = dinheiro! - produto.valor;
       produtosComprados.add(produto);
     } else {
       print(
