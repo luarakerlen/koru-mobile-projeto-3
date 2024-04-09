@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'enums.dart';
 import 'pessoa.dart';
 import 'produto.dart';
