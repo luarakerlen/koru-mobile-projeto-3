@@ -1,4 +1,3 @@
-import 'enums.dart';
 import 'pessoa.dart';
 import 'produto.dart';
 import 'revendedor.dart';
