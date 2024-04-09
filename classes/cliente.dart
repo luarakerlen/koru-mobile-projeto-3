@@ -32,4 +32,21 @@ class Cliente extends Pessoa {
           '${super.nome} não possui dinheiro suficiente para comprar o produto ${produto.nome}.');
     }
   }
+
+  void verProdutosComprados() {
+    try {
+      if (produtoComprados.length > 0) {
+        String msg = "Produtos comprados por ${super.nome} : \n";
+        produtoComprados.sort();
+        produtoComprados.forEach((produtos) {
+          msg += " ${produtos.nome} - ${produtos.valor.toStringAsFixed(2)}";
+        });
+        print(msg);
+      } else {
+        throw ("${super.nome} não comprou produto.");
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
 }
