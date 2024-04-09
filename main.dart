@@ -3,7 +3,6 @@ import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
-import 'classes/revendedor.dart';
 import 'classes/cliente.dart';
 import 'utils.dart';
 
