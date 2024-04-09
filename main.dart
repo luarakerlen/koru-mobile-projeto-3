@@ -129,6 +129,7 @@ main() {
   cliente4.comprarProduto(verano, func1);
   cliente3.comprarProduto(verano, func1);
   print("Lucro : ${func1.calcularLucro().toStringAsFixed(2)}");
+print("Lucro : ${func2.calcularLucro().toStringAsFixed(2)}");
 
   cliente4.verProdutosComprados();
 

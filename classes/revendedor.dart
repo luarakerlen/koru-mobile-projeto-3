@@ -39,14 +39,18 @@ promoções”.*/
   }
 
   double calcularLucro() {
-    double resultado = 0;
     try {
-      this.produtosVendidos.forEach((prd) {
-        resultado += prd.valor * this.porcentagemLucro;
-      });
-      return resultado;
+      if (produtosVendidos.length > 0) {
+        double resultado = 0;
+        this.produtosVendidos.forEach((prd) {
+          resultado += prd.valor * this.porcentagemLucro;
+        });
+        return resultado;
+      } else {
+        throw Exception();
+      }
     } catch (e) {
-      return resultado;
+      return 0.00;
     }
   }
 }

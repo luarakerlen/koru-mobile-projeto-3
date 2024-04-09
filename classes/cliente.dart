@@ -46,7 +46,7 @@ class Cliente extends Pessoa {
         throw ("${super.nome} não comprou produto.");
       }
     } catch (e) {
-      print(e);
+      print(e.toString());
     }
   }
 }
