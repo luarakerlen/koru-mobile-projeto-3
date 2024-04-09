@@ -192,6 +192,9 @@ main() {
   );
 
   clienteX.comprarProduto(produtoA, revendedorA);
+  clienteX.comprarProduto(produtoB, revendedorC);
+  clienteX.calcularMediaValorProdutosComprados();
+
 //cliente sem dinheiro
   Cliente clienteY = Cliente(
     nome: 'João',
@@ -202,4 +205,5 @@ main() {
   );
 
   clienteY.comprarProduto(produtoB, revendedorA);
+
 }
