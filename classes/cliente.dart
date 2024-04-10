@@ -65,7 +65,7 @@ class Cliente extends Pessoa {
   }
 
   void verResumo(double valorTotalGasto, double valorMedioGasto){
-    print("O total gasto por ${nome} foi ${fixarDuasCasasDecimais(valorTotalGasto)} reais e a média de valor dos produtos comprados é ${fixarDuasCasasDecimais(valorMedioGasto)} reais.");
+    print("O total gasto por ${nome} foi ${fixarDuasCasasDecimais(fixarDuasCasasDecimais(calcularTotalGasto()))} reais e a média de valor dos produtos comprados é ${fixarDuasCasasDecimais(calcularMediaProdutosComprados())} reais.");
   }
 }
 
