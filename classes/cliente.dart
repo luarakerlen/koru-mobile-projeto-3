@@ -32,7 +32,8 @@ class Cliente extends Pessoa {
       revendedor.venderProduto(produto);
       this.dinheiro -= produto.valor;
       produtoComprados.add(produto);
-      print('${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
+      print(
+        '${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
     } else {
       print(
           '${super.nome} não possui dinheiro suficiente para comprar o produto ${produto.nome}.');
