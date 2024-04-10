@@ -32,4 +32,12 @@ class Cliente extends Pessoa {
           '${super.nome} não possui dinheiro suficiente para comprar o produto ${produto.nome}.');
     }
   }
+
+  double calcularTotalGasto(){
+    double total = 0.0;
+    for(var produto in produtoComprados){
+      total += produto.valor;
+    }
+    return total;
+  }
 }
