@@ -13,6 +13,13 @@ class Cliente extends Pessoa {
   void falar(String fala) {
     print("Cliente ${super.nome} diz: $fala");
   }
+  void ordenarProdutosComprados(){
+    print('lista inicial');
+   produtoComprados.forEach((element) {print(element.nome);});
+    produtoComprados.sort((a, b) => a.nome.compareTo(b.nome));
+    print('lista ordenada');
+    produtoComprados.forEach((element) {print(element.nome);});
+  }
 
   void adicionarDinheiro(double valor) {
     this.dinheiro += valor;
@@ -25,8 +32,7 @@ class Cliente extends Pessoa {
       revendedor.venderProduto(produto);
       this.dinheiro -= produto.valor;
       produtoComprados.add(produto);
-      print(
-          '${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
+      print('${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
     } else {
       print(
           '${super.nome} não possui dinheiro suficiente para comprar o produto ${produto.nome}.');
