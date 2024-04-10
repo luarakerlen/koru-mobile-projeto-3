@@ -39,7 +39,7 @@ class Revendedor extends Pessoa {
   }
 
   //método verResumo
-  void verResumo(double totalVendido, double mediaAritmetica, double lucroObtido){
-    print("O total vendido por ${nome} foi ${fixarDuasCasasDecimais(totalVendido)} reais e a média aritmética de valor dos produtos vendidos é ${fixarDuasCasasDecimais(mediaAritmetica)} reais. O lucro recebido foi de ${fixarDuasCasasDecimais(lucroObtido)} reais.");
+  void verResumo(double totalVendido, double mediaValorVendido, double lucroObtido){
+    print("O total vendido por ${nome} foi ${fixarDuasCasasDecimais(totalVendido)} reais e a média aritmética de valor dos produtos vendidos é ${fixarDuasCasasDecimais(mediaValorVendido)} reais. O lucro recebido foi de ${fixarDuasCasasDecimais(lucroObtido)} reais.");
   }
 }
