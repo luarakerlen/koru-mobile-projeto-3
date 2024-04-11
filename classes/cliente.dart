@@ -14,11 +14,7 @@ class Cliente extends Pessoa {
     print("Cliente ${super.nome} diz: $fala");
   }
   void ordenarProdutosComprados(){
-    print('lista inicial');
-   produtoComprados.forEach((element) {print(element.nome);});
     produtoComprados.sort((a, b) => a.nome.compareTo(b.nome));
-    print('lista ordenada');
-    produtoComprados.forEach((element) {print(element.nome);});
   }
 
   void adicionarDinheiro(double valor) {
