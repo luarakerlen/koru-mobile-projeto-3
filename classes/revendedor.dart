@@ -46,12 +46,17 @@ promoções”.*/
    double calcularTotalProdutosVendidos() {
     double total = 0;
     
-    produtosVendidos.forEach((produto) {
+    this.produtosVendidos.forEach((produto) {
       total += produto.valor;
   
     });
 
   return total;
+   }
+
+   double calcularMediaProdutosVendidos(){
+    return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
+    
    }
 
   
