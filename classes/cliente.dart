@@ -36,11 +36,18 @@ class Cliente extends Pessoa {
     }
   }
 
+  double calcularTotalGasto(){
+    double total = 0.0;
+    for(var produto in produtoComprados){
+      total += produto.valor;
+    }
+    return total;
+  }
+
   void verProdutosComprados() {
     try {
       if (produtoComprados.length > 0) {
         String msg = "Produtos comprados por ${super.nome} : \n";
-        produtoComprados.sort();
         produtoComprados.forEach((produtos) {
           msg += " ${produtos.nome} - ${produtos.valor.toStringAsFixed(2)}";
         });
