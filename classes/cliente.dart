@@ -44,6 +44,18 @@ class Cliente extends Pessoa {
     }
   }
 
+  double calcularTotalGasto() {
+    double totalGasto = 0.0;
+    if (produtosComprados.isEmpty) {
+      print("Cliente $nome não possui produtos comprados");
+    } else {
+      produtosComprados.forEach((produto) {
+        totalGasto += produto.valor;
+      });
+    }
+    return totalGasto;
+  }
+  
   void calcularMediaValorProdutosComprados() {
     if(produtosComprados.isEmpty) {
       print("Cliente $nome não possui produtos comprados");
@@ -63,4 +75,5 @@ class Cliente extends Pessoa {
     }
   }
 }
+
 
