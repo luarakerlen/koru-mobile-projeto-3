@@ -40,4 +40,20 @@ class Cliente extends Pessoa {
     }
     return total;
   }
+
+  void verProdutosComprados() {
+    try {
+      if (produtoComprados.length > 0) {
+        String msg = "Produtos comprados por ${super.nome} : \n";
+        produtoComprados.forEach((produtos) {
+          msg += " ${produtos.nome} - ${produtos.valor.toStringAsFixed(2)}";
+        });
+        print(msg);
+      } else {
+        throw ("${super.nome} não comprou produto.");
+      }
+    } catch (e) {
+      print(e.toString());
+    }
+  }
 }

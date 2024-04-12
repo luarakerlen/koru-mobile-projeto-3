@@ -127,4 +127,13 @@ main() {
       'Vinicius', '3322578212', DateTime.parse('2024-01-16'), Genero.masculino);
   cliente4.adicionarDinheiro(350.00);
   cliente4.comprarProduto(verano, func1);
+  cliente3.comprarProduto(verano, func1);
+  print("Lucro : ${func1.calcularLucro().toStringAsFixed(2)}");
+print("Lucro : ${func2.calcularLucro().toStringAsFixed(2)}");
+
+  cliente4.verProdutosComprados();
+
+  Cliente cliente5 = new Cliente("Adevalter", "123654789-11",
+      DateTime.parse("1974-08-22"), Genero.masculino);
+  cliente5.verProdutosComprados();
 }
