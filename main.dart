@@ -154,6 +154,11 @@ main() {
       print(element.nome);
    });
 
-
+pularLinha();
+//Teste do método ordenarProdutosComprados [callback],  e verProdutosComprados :
+   print("*//"*30);
+  cliente3.verProdutosComprados();
+  print("*//"*30);
+// fim do teste
 
 }
