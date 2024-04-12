@@ -14,7 +14,16 @@ class Cliente extends Pessoa {
     print("Cliente ${super.nome} diz: $fala");
   }
   void ordenarProdutosComprados(){
-    produtoComprados.sort((a, b) => a.nome.compareTo(b.nome));
+    this.produtoComprados.sort((a, b) => b.nome.compareTo(a.nome));
+  }
+
+  void exibirProdutosComValor(){
+    ordenarProdutosComprados();
+    print("# Produtos comprados por ${super.nome}:");
+    produtoComprados.forEach((produtos) {
+      print(" -- ${produtos.nome} - ${produtos.valor.toStringAsFixed(2)}");
+    });
+    print("\n");
   }
 
   void adicionarDinheiro(double valor) {
@@ -50,11 +59,7 @@ class Cliente extends Pessoa {
   void verProdutosComprados() {
     try {
       if (produtoComprados.length > 0) {
-        String msg = "Produtos comprados por ${super.nome} : \n";
-        produtoComprados.forEach((produtos) {
-          msg += " ${produtos.nome} - ${produtos.valor.toStringAsFixed(2)}";
-        });
-        print(msg);
+        exibirProdutosComValor();
       } else {
         throw ("${super.nome} não comprou produto.");
       }
