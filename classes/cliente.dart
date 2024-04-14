@@ -40,10 +40,13 @@ class Cliente extends Pessoa {
   }
 
   void _realizarCompra(Produto produto, Revendedor revendedor) {
-    /*if (revendedor.venderProduto(produto)) {
+    try {
+      revendedor.venderProduto(produto);
       produtosComprados.add(produto);
       dinheiro -= produto.valor;
-    }*/
+    } catch (e) {
+      print("Erro ao comprar o produto: $e");
+    }
   }
 
   void _recusarCompra(String nomeProduto) {
