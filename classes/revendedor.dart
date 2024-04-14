@@ -72,4 +72,10 @@ class Revendedor extends Pessoa {
 
     return lucroTotal;
   }
+
+  void verResumo() {
+    print(
+        'O total vendido por $nome foi ${calcularTotalVendido().toStringAsFixed(2)} reais e a média aritmética de valor dos produtos vendidos é ${calcularMediaProdutosVendidos().toStringAsFixed(2)} reais. O lucro recebido foi de ${calcularLucro().toStringAsFixed(2)} reais.');
+  }
 }
+
