@@ -49,4 +49,12 @@ class Revendedor extends Pessoa {
     }
     return mediaProdutosVendidos;
   }
+
+  double calcularLucroTotal() {
+    double lucroTotal = 0;
+    produtosVendidos.forEach((element) {
+      lucroTotal += element.valor * porcentagemLucro;
+    });
+    return lucroTotal;
+  }
 }
