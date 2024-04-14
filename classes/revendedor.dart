@@ -19,13 +19,13 @@ class Revendedor extends Pessoa {
             dataDeNascimento: dataDeNascimento,
             genero: genero);
 
-  void venderProduto(Produto produto){
-  try {
-    produto.realizarVenda();
-    produtosVendidos.add(produto);
-  } catch (e) {
-    throw e;
-  }
+  void venderProduto(Produto produto) {
+    try {
+      produto.realizarVenda();
+      produtosVendidos.add(produto);
+    } catch (e) {
+      throw e;
+    }
   }
 
   @override
@@ -57,11 +57,19 @@ class Revendedor extends Pessoa {
     return media;
   }
 
-double calcularTotalVendido() {
+  double calcularTotalVendido() {
     double calcularTotalVendido = 0;
     for (Produto produto in produtosVendidos) {
       calcularTotalVendido += produto.valor;
     }
     return calcularTotalVendido;
+  }
+
+  double calcularLucro() {
+    double lucroTotal = 0;
+
+    lucroTotal = porcentagemLucro * calcularTotalVendido();
+
+    return lucroTotal;
   }
 }
