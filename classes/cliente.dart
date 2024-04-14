@@ -59,7 +59,7 @@ class Cliente extends Pessoa {
         'Cliente $nome seu saldo atual é de ${dinheiro.toStringAsFixed(2)} reais');
   }
 
-  void ordenarProdutosComprados() {
+  void _ordenarProdutosComprados() {
     produtosComprados.sort((a, b) => a.nome.compareTo(b.nome));
   }
 
@@ -76,6 +76,15 @@ class Cliente extends Pessoa {
     double mediaDeProdutosComprados = somaValores / produtosComprados.length;
 
     return mediaDeProdutosComprados;
+  }
+
+  void verProdutosComprados() {
+    _ordenarProdutosComprados();
+
+    print('Produtos comprados por $nome: ');
+    for (Produto produto in produtosComprados) {
+      print('${produto.nome} - ${produto.valor.toStringAsFixed(2)}');
+    }
   }
 
   void verResumo() {
