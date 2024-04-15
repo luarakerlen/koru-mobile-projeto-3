@@ -70,7 +70,7 @@ class Cliente extends Pessoa {
     }
   }
 
-  double _calcularMediaProdutosComrpados() {
+  double _calcularMediaProdutosComprados() {
     try {
       if (!produtoComprados.isEmpty) {
         double resultado = 0.0;
@@ -85,4 +85,6 @@ class Cliente extends Pessoa {
       return 0.0;
     }
   }
+    void verResumo() => print(
+      "O total gasto por ${super.nome} foi de ${_calcularTotalGasto().toStringAsFixed(2)} reais e a média de valor dos produtos comprados é ${_calcularMediaProdutosComprados().toStringAsFixed(2)} reais ");
 }
