@@ -132,7 +132,7 @@ main() {
   cliente4.comprarProduto(verano, func1);
   cliente3.comprarProduto(verano, func1);
   print("Lucro : ${func1.calcularLucro().toStringAsFixed(2)}");
- print("Lucro : ${func2.calcularLucro().toStringAsFixed(2)}");
+  print("Lucro : ${func2.calcularLucro().toStringAsFixed(2)}");
 
   cliente3.verProdutosComprados();
   cliente4.verProdutosComprados();
@@ -140,4 +140,15 @@ main() {
   Cliente cliente5 = new Cliente("Adevalter", "123654789-11",
       DateTime.parse("1974-08-22"), Genero.masculino);
   cliente5.verProdutosComprados();
+
+  Cliente cliente6 = new Cliente("Adevalter", "123654789-11",
+      DateTime.parse("1974-08-22"), Genero.masculino);
+  cliente6.adicionarDinheiro(1000.00);
+  cliente6.comprarProduto(verano, func1);
+  cliente6.comprarProduto(bleu, func1);
+  cliente6.comprarProduto(parfumLily, func1);
+  cliente6.comprarProduto(verano, func1);
+  cliente6.comprarProduto(verano, func1);
+
+  cliente6.verResumo();
 }

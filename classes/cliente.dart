@@ -13,11 +13,12 @@ class Cliente extends Pessoa {
   void falar(String fala) {
     print("Cliente ${super.nome} diz: $fala");
   }
-  void ordenarProdutosComprados(){
+
+  void ordenarProdutosComprados() {
     this.produtoComprados.sort((a, b) => b.nome.compareTo(a.nome));
   }
 
-  void exibirProdutosComValor(){
+  void exibirProdutosComValor() {
     ordenarProdutosComprados();
     print("# Produtos comprados por ${super.nome}:");
     produtoComprados.forEach((produtos) {
@@ -34,23 +35,24 @@ class Cliente extends Pessoa {
 
   void comprarProduto(Produto produto, Revendedor revendedor) {
     if (dinheiro >= produto.valor) {
-     try{
-      revendedor.venderProduto(produto);
-      this.dinheiro -= produto.valor;
-      produtoComprados.add(produto);
-      print('${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
-     }catch(error){
-      print('operação não pode ser concluida,erro:$error');
-     }
+      try {
+        revendedor.venderProduto(produto);
+        this.dinheiro -= produto.valor;
+        produtoComprados.add(produto);
+        print(
+            '${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
+      } catch (error) {
+        print('operação não pode ser concluida,erro:$error');
+      }
     } else {
       print(
           '${super.nome} não possui dinheiro suficiente para comprar o produto ${produto.nome}.');
     }
   }
 
-  double calcularTotalGasto(){
+  double _calcularTotalGasto() {
     double total = 0.0;
-    for(var produto in produtoComprados){
+    for (var produto in produtoComprados) {
       total += produto.valor;
     }
     return total;
@@ -65,6 +67,22 @@ class Cliente extends Pessoa {
       }
     } catch (e) {
       print(e.toString());
+    }
+  }
+
+  double _calcularMediaProdutosComrpados() {
+    try {
+      if (!produtoComprados.isEmpty) {
+        double resultado = 0.0;
+        this.produtoComprados.forEach((comprados) {
+          resultado += comprados.valor;
+        });
+        return resultado / produtoComprados.length;
+      } else {
+        throw new FormatException();
+      }
+    } catch (e) {
+      return 0.0;
     }
   }
 }
