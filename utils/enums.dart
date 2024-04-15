@@ -1,5 +1,10 @@
 enum Genero {
   Feminino,
-  Masculino, 
+  Masculino,
   Outro;
+}
+
+enum Usuario {
+  revendedor,
+  cliente,
 }
