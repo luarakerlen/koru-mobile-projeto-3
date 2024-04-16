@@ -38,7 +38,6 @@ promoções”.*/
     this.produtosVendidos.add(produto);
   }
 
-<<<<<<< HEAD
    double calcularTotalProdutosVendidos() {
     double total = 0;
     
@@ -58,10 +57,6 @@ promoções”.*/
        }
     }
 
-   
-
-  
-=======
   double calcularLucro() {
     try {
       if (produtosVendidos.length > 0) {
@@ -77,5 +72,4 @@ promoções”.*/
       return 0.00;
     }
   }
->>>>>>> develop
 }
