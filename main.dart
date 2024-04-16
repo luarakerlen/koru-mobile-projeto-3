@@ -152,6 +152,9 @@ main() {
   revendedorC.falar("Temos promoções!");
   pularLinha();
 
+  revendedorA.verResumo();
+  pularLinha();
+
   //teste método cliente falar
   Cliente clienteA = Cliente(
     nome: 'João',
