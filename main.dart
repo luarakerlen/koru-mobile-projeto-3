@@ -140,4 +140,8 @@ main() {
   Cliente cliente5 = new Cliente("Adevalter", "123654789-11",
       DateTime.parse("1974-08-22"), Genero.masculino);
   cliente5.verProdutosComprados();
+
+  //resumo de vendas revendedor:
+  func1.verResumo();
+  func2.verResumo();
 }

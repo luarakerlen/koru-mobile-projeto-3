@@ -53,4 +53,17 @@ promoções”.*/
       return 0.00;
     }
   }
+  
+  void verResumo(){
+    double totalVendido = 0; //calculo total vendido
+    double mediaAritmetica = 0; // calculo media aritmetica
+    double lucroObtido = calcularLucro(); //calcular lucro obtido
+
+    //print resumo
+    print("Resumo de vendas do revendedor:${super.nome}");
+    print("O total vendido foi de ${totalVendido.toStringAsFixed(2)} reais");
+    print("A media aritmetica de valor dos produtos vendidos é de ${mediaAritmetica.toStringAsFixed(2)} reais");
+    print("o lucro recebido foi de ${lucroObtido.toStringAsFixed(2)} reais");
+
+  }
 }
