@@ -131,7 +131,7 @@ main() {
   cliente4.comprarProduto(bleu, func1);
   cliente4.comprarProduto(parfumLily, func1);
   cliente4.comprarProduto(verano, func1);
-cliente4.comprarProduto(bleu,func1);
+  cliente4.comprarProduto(bleu,func1);
   
   cliente3.comprarProduto(verano, func1);
 

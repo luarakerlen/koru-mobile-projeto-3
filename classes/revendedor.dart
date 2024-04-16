@@ -50,10 +50,14 @@ promoções”.*/
    }
 
    double calcularMediaProdutosVendidos(){
-   try {
-         return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
+    try {
+          if(this.produtosVendidos.isNotEmpty){
+            return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
+          } else{
+            return 0.0;
+          }
        } catch (e) {
-         return 0.00;
+         return 0.0;
        }
     }
 
@@ -69,13 +73,13 @@ promoções”.*/
         throw Exception();
       }
     } catch (e) {
-      return 0.00;
+      return 0;
     }
   }
   
   void verResumo(){
-    double totalVendido = 0; //calculo total vendido
-    double mediaAritmetica = 0; // calculo media aritmetica
+    double totalVendido = calcularTotalProdutosVendidos(); //calculo total vendido
+    double mediaAritmetica = calcularMediaProdutosVendidos(); // calculo media aritmetica
     double lucroObtido = calcularLucro(); //calcular lucro obtido
 
     //print resumo
