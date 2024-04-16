@@ -13,6 +13,18 @@ class Cliente extends Pessoa {
   void falar(String fala) {
     print("Cliente ${super.nome} diz: $fala");
   }
+  void ordenarProdutosComprados(){
+    this.produtoComprados.sort((a, b) => b.nome.compareTo(a.nome));
+  }
+
+  void exibirProdutosComValor(){
+    ordenarProdutosComprados();
+    print("# Produtos comprados por ${super.nome}:");
+    produtoComprados.forEach((produtos) {
+      print(" -- ${produtos.nome} - ${produtos.valor.toStringAsFixed(2)}");
+    });
+    print("\n");
+  }
 
   void adicionarDinheiro(double valor) {
     this.dinheiro += valor;
@@ -22,14 +34,37 @@ class Cliente extends Pessoa {
 
   void comprarProduto(Produto produto, Revendedor revendedor) {
     if (dinheiro >= produto.valor) {
+     try{
       revendedor.venderProduto(produto);
       this.dinheiro -= produto.valor;
       produtoComprados.add(produto);
-      print(
-          '${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
+      print('${super.nome} comprou o produto ${produto.nome} por ${produto.valor.toStringAsFixed(2)} reais.');
+     }catch(error){
+      print('operação não pode ser concluida,erro:$error');
+     }
     } else {
       print(
           '${super.nome} não possui dinheiro suficiente para comprar o produto ${produto.nome}.');
+    }
+  }
+
+  double calcularTotalGasto(){
+    double total = 0.0;
+    for(var produto in produtoComprados){
+      total += produto.valor;
+    }
+    return total;
+  }
+
+  void verProdutosComprados() {
+    try {
+      if (produtoComprados.length > 0) {
+        exibirProdutosComValor();
+      } else {
+        throw ("${super.nome} não comprou produto.");
+      }
+    } catch (e) {
+      print(e.toString());
     }
   }
 }

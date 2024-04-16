@@ -13,7 +13,7 @@ class Produto {
 
       print("Compra de um(a) produto ${this.nome} realizada com sucesso!");
     } else {
-      print("No momento não possuímos o produto ${this.nome} em estoque");
+      throw "No momento não possuímos o produto ${this.nome} em estoque";
     }
   }
 
