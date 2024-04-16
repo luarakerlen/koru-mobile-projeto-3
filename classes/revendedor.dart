@@ -38,6 +38,25 @@ promoções”.*/
     this.produtosVendidos.add(produto);
   }
 
+   double calcularTotalProdutosVendidos() {
+    double total = 0;
+    
+    this.produtosVendidos.forEach((produto) {
+      total += produto.valor;
+  
+    });
+
+  return total;
+   }
+
+   double calcularMediaProdutosVendidos(){
+   try {
+         return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
+       } catch (e) {
+         return 0.00;
+       }
+    }
+
   double calcularLucro() {
     try {
       if (produtosVendidos.length > 0) {
