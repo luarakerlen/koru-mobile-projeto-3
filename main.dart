@@ -1,5 +1,6 @@
 // Importações dos arquivos que serão utilizados
 
+
 import 'classes/cliente.dart';
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
@@ -130,9 +131,9 @@ main() {
   cliente4.comprarProduto(bleu, func1);
   cliente4.comprarProduto(parfumLily, func1);
   cliente4.comprarProduto(verano, func1);
+cliente4.comprarProduto(bleu,func1);
+  
   cliente3.comprarProduto(verano, func1);
-  print("Lucro : ${func1.calcularLucro().toStringAsFixed(2)}");
- print("Lucro : ${func2.calcularLucro().toStringAsFixed(2)}");
 
   cliente3.verProdutosComprados();
   cliente4.verProdutosComprados();
@@ -141,3 +142,5 @@ main() {
       DateTime.parse("1974-08-22"), Genero.masculino);
   cliente5.verProdutosComprados();
 }
+
+
