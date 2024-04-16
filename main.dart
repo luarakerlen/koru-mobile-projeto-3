@@ -122,7 +122,8 @@ main() {
       DateTime.parse("1980-05-15"), Genero.feminino, "10420");
   func2.falar(
       "Olá bom dia tuo bem! me chamo Antonela e irei aprensentar nosso catálago");
-
+  print("Lucro : ${func1.calcularLucro().toStringAsFixed(2)}");
+  print("Lucro : ${func2.calcularLucro().toStringAsFixed(2)}");
   pularLinha();
   Cliente cliente4 = Cliente(
       'Vinicius', '3322578212', DateTime.parse('2024-01-16'), Genero.masculino);
@@ -131,9 +132,10 @@ main() {
   cliente4.comprarProduto(bleu, func1);
   cliente4.comprarProduto(parfumLily, func1);
   cliente4.comprarProduto(verano, func1);
-cliente4.comprarProduto(bleu,func1);
+  cliente4.comprarProduto(bleu,func1);
   
   cliente3.comprarProduto(verano, func1);
+
 
   cliente3.verProdutosComprados();
   cliente4.verProdutosComprados();
@@ -141,6 +143,17 @@ cliente4.comprarProduto(bleu,func1);
   Cliente cliente5 = new Cliente("Adevalter", "123654789-11",
       DateTime.parse("1974-08-22"), Genero.masculino);
   cliente5.verProdutosComprados();
+
+  Cliente cliente6 = new Cliente("Adevalter", "123654789-11",
+      DateTime.parse("1974-08-22"), Genero.masculino);
+  cliente6.adicionarDinheiro(1000.00);
+  cliente6.comprarProduto(verano, func1);
+  cliente6.comprarProduto(bleu, func1);
+  cliente6.comprarProduto(parfumLily, func1);
+  cliente6.comprarProduto(verano, func1);
+  cliente6.comprarProduto(verano, func1);
+
+  cliente6.verResumo();
 }
 
 
