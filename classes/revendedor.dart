@@ -38,11 +38,6 @@ promoções”.*/
     this.produtosVendidos.add(produto);
   }
 
-  double calculaTotalVendido(){
-    return 0.0;
-
-  
-  }
    double calcularTotalProdutosVendidos() {
     double total = 0;
     
@@ -55,9 +50,14 @@ promoções”.*/
    }
 
    double calcularMediaProdutosVendidos(){
-    return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
-    
-   }
+   try {
+         return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
+       } catch (e) {
+         return 0.00;
+       }
+    }
+
+   
 
   
 }

@@ -130,9 +130,6 @@ main() {
   cliente4.comprarProduto(verano, func1);
 cliente4.comprarProduto(bleu,func1);
   
-  print("total de produtos vendidos: ${func1.calcularTotalProdutosVendidos()}");
-
-print("a media do produto vendido é: ${func1.calcularMediaProdutosVendidos()}");
 }
 
 
