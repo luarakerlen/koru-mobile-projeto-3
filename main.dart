@@ -212,6 +212,8 @@ main() {
       genero: Genero.Masculino);
 
   clienteY.comprarProduto(produtoB, revendedorA);
+  //teste método verBrindes
+  clienteY.verBrindes();
 
   /* ------------------------------------------ */
   /* Testes da classe Brinde */
@@ -225,4 +227,4 @@ main() {
 }
 
 
-}
+

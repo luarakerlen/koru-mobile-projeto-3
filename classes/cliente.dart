@@ -81,7 +81,17 @@ class Cliente extends Pessoa {
 
 }
 
-  void verResumo(double valorTotalGasto, double valorMedioGasto){
-    print("O total gasto por ${nome} foi ${fixarDuasCasasDecimais(calcularTotalGasto())} reais e a média de valor dos produtos comprados é ${fixarDuasCasasDecimais(calcularMediaProdutosComprados())} reais.");
+
+  void verResumo(double valorTotalGasto, double valorMedioGasto) {
+    print(
+        "O total gasto por ${nome} foi ${fixarDuasCasasDecimais(calcularTotalGasto())} reais e a média de valor dos produtos comprados é ${fixarDuasCasasDecimais(calcularMediaProdutosComprados())} reais.");
+  }
+  
+  void verBrindes() {
+    ordenarBrindes();
+    print('Brindes recebidos por $nome:');
+    brindes.forEach((brinde) {
+      print('$brinde');
+    });
   }
 }
