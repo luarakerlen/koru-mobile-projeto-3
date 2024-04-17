@@ -48,29 +48,38 @@ class Cliente extends Pessoa {
     }
   }
 
-  void calcularMediaValorProdutosComprados() {
+  double calcularTotalGasto() {
+    double totalGasto = 0.0;
     if (produtosComprados.isEmpty) {
       print("Cliente $nome não possui produtos comprados");
     } else {
+      produtosComprados.forEach((produto) {
+        totalGasto += produto.valor;
+      });
+    }
+    return totalGasto;
+  }
+
+  void calcularMediaValorProdutosComprados() {
+    if  (produtosComprados.isEmpty) {
+      print("Cliente $nome não possui produtos comprados");
+    } else {
       List<Produto> produtosComprados = this.produtosComprados;
-      double valorTotalGasto = 0.0;
       int numeroDeProdutos = produtosComprados.length;
       double valorMedio;
 
-      produtosComprados.forEach((produto) {
-        valorTotalGasto += produto.valor;
-      });
-
-      valorMedio = valorTotalGasto / numeroDeProdutos;
+      valorMedio = calcularTotalGasto() / numeroDeProdutos;
 
       print(
           "O valor médio gasto em produtos pelo cliente $nome, é de R\$ $valorMedio");
     }
+  }
 
-    void ordenarProdutosComprados() {
+  void ordenarProdutosComprados() {
     produtosComprados.sort((a, b) => a.nome.compareTo(b.nome));
   }
-  }
+
+}
 
 
   void verResumo(double valorTotalGasto, double valorMedioGasto) {
