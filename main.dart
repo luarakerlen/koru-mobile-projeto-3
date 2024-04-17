@@ -1,4 +1,5 @@
 // Importações dos arquivos que serão utilizados
+import 'classes/brinde.dart';
 import 'classes/enums.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
@@ -211,4 +212,17 @@ main() {
       genero: Genero.Masculino);
 
   clienteY.comprarProduto(produtoB, revendedorA);
+
+  /* ------------------------------------------ */
+  /* Testes da classe Brinde */
+
+  Brinde brindeA = Brinde(
+      nome: 'Lápis Batom Instalip Vinho',
+      pontosNecessarios: 50,
+      qtdEmEstoque: 20);
+
+  brindeA.consultarPontosNecessarios();
+}
+
+
 }
