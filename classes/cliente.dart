@@ -74,6 +74,11 @@ class Cliente extends Pessoa {
           "O valor médio gasto em produtos pelo cliente $nome, é de R\$ $valorMedio");
     }
   }
+
+  void ordenarProdutosComprados() {
+    produtosComprados.sort((a, b) => a.nome.compareTo(b.nome));
+  }
+
 }
 
   void verResumo(double valorTotalGasto, double valorMedioGasto){
