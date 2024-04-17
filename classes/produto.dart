@@ -8,7 +8,7 @@ class Produto {
   Produto(
       {required this.nome, required this.valor, required this.qtdEmEstoque});
 
-  void realizarVenda() {
+  void realizarVenda({required int quantidade}) {
     if (qtdEmEstoque > 0) {
       qtdVendida++;
       qtdEmEstoque--;
