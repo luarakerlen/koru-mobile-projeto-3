@@ -34,9 +34,13 @@ class Revendedor extends Pessoa {
 promoções”.*/
 
   void venderProduto(Produto produto) {
-    produto.realizarVenda();
-    this.produtosVendidos.add(produto);
-  }
+    try 
+      {produto.realizarVenda();
+      this.produtosVendidos.add(produto);}
+    catch(e) {  
+      rethrow;
+    }
+    }
 
    double calcularTotalProdutosVendidos() {
     double total = 0;
