@@ -50,10 +50,14 @@ promoções”.*/
    }
 
    double calcularMediaProdutosVendidos(){
-   try {
-         return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
+    try {
+          if(this.produtosVendidos.isNotEmpty){
+            return this.calcularTotalProdutosVendidos() / this.produtosVendidos.length;
+          } else{
+            return 0.0;
+          }
        } catch (e) {
-         return 0.00;
+         return 0.0;
        }
     }
 
@@ -69,7 +73,20 @@ promoções”.*/
         throw Exception();
       }
     } catch (e) {
-      return 0.00;
+      return 0;
     }
+  }
+  
+  void verResumo(){
+    double totalVendido = calcularTotalProdutosVendidos(); //calculo total vendido
+    double mediaAritmetica = calcularMediaProdutosVendidos(); // calculo media aritmetica
+    double lucroObtido = calcularLucro(); //calcular lucro obtido
+
+    //print resumo
+    print("Resumo de vendas do revendedor:${super.nome}");
+    print("O total vendido foi de ${totalVendido.toStringAsFixed(2)} reais");
+    print("A media aritmetica de valor dos produtos vendidos é de ${mediaAritmetica.toStringAsFixed(2)} reais");
+    print("o lucro recebido foi de ${lucroObtido.toStringAsFixed(2)} reais");
+
   }
 }
