@@ -80,8 +80,16 @@ main() {
 
    pularLinha();
 
-   revendedorB.venderProduto(produto5);
-   revendedorB.venderProduto(produto5);
+   try{
+    revendedorB.venderProduto(produto5);
+   }catch(e){
+    print('Não foi possível completar a compra: $e');
+   }
+   try{
+    revendedorB.venderProduto(produto5);
+   }catch(e){
+    print('Não foi possível completar a compra: $e');
+   }
    pularLinha();
    print("A lista de ${revendedorB.nome} é: ");
    revendedorB.produtosVendidos.forEach((element) {
