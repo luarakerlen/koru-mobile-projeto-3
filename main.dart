@@ -1,3 +1,4 @@
+import 'classes/cliente.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
@@ -7,7 +8,7 @@ import 'enums.dart';
 main() {
   /* Declaração de objetos Produto */
 
-  Produto produto1 = Produto("Desodorante Antitranspirante Aerossol Club 6 125ml", 23.33, 5);
+  Produto produto1 = Produto("Desodorante Antitranspirante Aerossol Club 6 125ml", 23.33, 2);
   Produto produto2 = Produto("Shampoo Siàge Remove A Oleosidade 250ml", 42.99, 3);
   Produto produto3 = Produto("Condicionador Instance Frutas Vermelhas 300 ml", 23.99, 0);
   Produto produto4 = Produto("Sérum Facial Multiprotetor FPS 50 12 em 1 Niina Secrets Skin 30ml", 109.99, 3);
@@ -95,4 +96,8 @@ main() {
     pessoaC.maioridade();
 
     pularLinha();
+
+    Cliente cliente1 = Cliente("Gabriel", "12345678900", DateTime.parse("2000-02-01"), Genero.Masculino);
+    cliente1.adicionarDinheiro(37.50);
+
 }
