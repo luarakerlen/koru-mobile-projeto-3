@@ -154,10 +154,18 @@ main() {
       print(element.nome);
    });
 
+
     pularLinha();
     print("O valor total de vendas de ${revendedorB.nome} é: R\$ ${revendedorB.calcularTotalVendido().toStringAsFixed(2)} e a média é de: R\$ ${revendedorB.calcularMediaProdutosVendidos().toStringAsFixed(2)} tendo um lucro de R\$ ${revendedorB.calcularLucroTotal().toStringAsFixed(2)}");
     pularLinha();
     print("O valor total de vendas de ${revendedorA.nome} é: R\$ ${revendedorA.calcularTotalVendido().toStringAsFixed(2)} e a média é de: R\$ ${revendedorB.calcularMediaProdutosVendidos().toStringAsFixed(2)} tendo um lucro de R\$ ${revendedorB.calcularLucroTotal().toStringAsFixed(2)}");
     pularLinha();
+
+//Teste do método ordenarProdutosComprados [callback],  e verProdutosComprados :
+   print("*//"*30);
+  cliente3.verProdutosComprados();
+  print("*//"*30);
+// fim do teste
+
 
 }

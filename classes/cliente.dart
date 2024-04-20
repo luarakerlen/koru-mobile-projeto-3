@@ -40,4 +40,16 @@ class Cliente extends Pessoa {
       print("O saldo atual de $nome é R\$ ${dinheiro.toStringAsFixed(2)}.");
     }
   }
+
+//Criação de método ordenarProdutosComprados
+void _ordenarProdutosComprados() {
+  produtosComprados.sort((a, b) => a.nome.compareTo(b.nome));
+}
+
+//Criação de método verProdutosComprados
+  void verProdutosComprados(){
+    _ordenarProdutosComprados();
+    print("Produtos comprados por $nome em ordem alfabética:");
+    produtosComprados.forEach((produto)=> print(" - ${produto.nome} - R\$ ${produto.valor.toStringAsFixed(2)}"));
+  }
 }
