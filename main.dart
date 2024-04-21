@@ -11,9 +11,9 @@ main() {
   Produto produto1 = Produto("Desodorante Antitranspirante Aerossol Club 6 125ml", 23.33, 5);
   Produto produto2 = Produto("Shampoo Siàge Remove A Oleosidade 250ml", 42.99, 0);
   Produto produto3 = Produto("Condicionador Instance Frutas Vermelhas 300 ml", 23.99, 0);
-  Produto produto4 = Produto("Sérum Facial Multiprotetor FPS 50 12 em 1 Niina Secrets Skin 30ml", 109.99, 3);
+  Produto produto4 = Produto("Sérum Facial Multiprotetor FPS 50 12 em 1 Niina Secrets Skin 30ml", 109.99, 2);
   Produto produto5 = Produto("Pó Compacto Adapt Glam Skin Protect 10g", 49.99, 1);
-  Produto produto6 = Produto("Malbec Ultra Bleu Desodorante Colônia 100ml", 179.90 , 6);
+  Produto produto6 = Produto("Malbec Ultra Bleu Desodorante Colônia 100ml", 179.90 , 0);
   Produto produto7 = Produto("Egeo Beat Desodorante Colônia 90ml", 119.80 , 4);
   Produto produto8 = Produto("Arbo Desodorante Colônia 100ml", 164.90 , 7);
 
@@ -136,11 +136,19 @@ main() {
     pularLinha();
 
     //Teste do método comprarProduto():
-    cliente3.comprarProduto(produto6, revendedorB);
+    try{
+      cliente3.comprarProduto(produto6, revendedorB);
+    }catch(e){
+      print("Não foi possível realizar a compra: $e");
+    }
     cliente3.adicionarDinheiro(200);
     pularLinha();
 
-    cliente3.comprarProduto(produto6, revendedorB);
+    try{
+      cliente3.comprarProduto(produto6, revendedorB);
+    }catch(e){
+      print("Não foi possível realizar a compra: $e");
+    }
     pularLinha();
 
     print("A lista de produtos comprados de ${cliente3.nome} é: ");
@@ -149,7 +157,11 @@ main() {
     pularLinha();
 
     cliente3.adicionarDinheiro(200);
-    cliente3.comprarProduto(produto4, revendedorA);
+    try{
+      cliente3.comprarProduto(produto4, revendedorA);
+    } catch(e){
+      print("Não foi possível realizar a compra: $e");
+    }
     pularLinha();
 
     print("A lista de produtos comprados de ${cliente3.nome} é: ");
