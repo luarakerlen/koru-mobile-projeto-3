@@ -1,7 +1,7 @@
+import 'classes/cliente.dart';
 import 'classes/pessoa.dart';
 import 'classes/produto.dart';
 import 'classes/revendedor.dart';
-import 'classes/cliente.dart';
 import 'utils.dart';
 import 'enums.dart';
 
@@ -9,7 +9,7 @@ main() {
 
   /* Declaração de objetos Produto */
   Produto produto1 = Produto("Desodorante Antitranspirante Aerossol Club 6 125ml", 23.33, 5);
-  Produto produto2 = Produto("Shampoo Siàge Remove A Oleosidade 250ml", 42.99, 3);
+  Produto produto2 = Produto("Shampoo Siàge Remove A Oleosidade 250ml", 42.99, 0);
   Produto produto3 = Produto("Condicionador Instance Frutas Vermelhas 300 ml", 23.99, 0);
   Produto produto4 = Produto("Sérum Facial Multiprotetor FPS 50 12 em 1 Niina Secrets Skin 30ml", 109.99, 3);
   Produto produto5 = Produto("Pó Compacto Adapt Glam Skin Protect 10g", 49.99, 1);
@@ -18,9 +18,17 @@ main() {
   Produto produto8 = Produto("Arbo Desodorante Colônia 100ml", 164.90 , 7);
 
   /* Testes da classe Produto */  
-    produto1.realizarVenda();
+    try{
+      produto1.realizarVenda();
+    } catch (e){
+      print("Não foi possível realizar compra: $e");
+    }
     pularLinha();
-    produto2.realizarVenda();
+    try{
+      produto2.realizarVenda();
+    } catch (e){
+      print("Não foi possível realizar compra: $e");
+    }
 
   // Teste o método verReceitaGerada algumas vezes...
     print(produto3.verReceitaGerada());
@@ -95,9 +103,16 @@ main() {
    revendedorD.falar("Temos promoções");
    pularLinha();
 
-  // Teste o método vender produtos algumas vezes...
-   revendedorB.venderProduto(produto5);
-   revendedorB.venderProduto(produto5);
+   try{
+    revendedorB.venderProduto(produto5);
+   }catch(e){
+    print('Não foi possível completar a compra: $e');
+   }
+   try{
+    revendedorB.venderProduto(produto5);
+   }catch(e){
+    print('Não foi possível completar a compra: $e');
+   }
    pularLinha();
    print("A lista de ${revendedorB.nome} é: ");
    revendedorB.produtosVendidos.forEach((element) {
@@ -154,6 +169,8 @@ main() {
       print(element.nome);
    });
 
+    
+    cliente1.adicionarDinheiro(37.50);
 
     pularLinha();
     print("O valor total de vendas de ${revendedorB.nome} é: R\$ ${revendedorB.calcularTotalVendido().toStringAsFixed(2)} e a média é de: R\$ ${revendedorB.calcularMediaProdutosVendidos().toStringAsFixed(2)} tendo um lucro de R\$ ${revendedorB.calcularLucroTotal().toStringAsFixed(2)}");
@@ -169,3 +186,5 @@ main() {
 
 
 }
+
+
