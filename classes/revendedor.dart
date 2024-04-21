@@ -52,4 +52,9 @@ class Revendedor extends Pessoa {
     double total = calcularTotalVendido();
     return total/produtosVendidos.length;
   }
+
+  double calcularLucro(){
+    double totalVendido = calcularTotalVendido();
+    return totalVendido * (porcentagemLucro/100);
+  }
 }
