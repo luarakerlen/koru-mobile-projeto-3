@@ -36,4 +36,12 @@ class Revendedor extends Pessoa {
       throw e;
     }
   }
+
+  double calcularTotalVendido(){
+    double total = 0.0;
+    for(Produto produto in produtosVendidos){
+      total +=produto.verReceitaGerada();
+    }
+    return total;
+  }
 }
