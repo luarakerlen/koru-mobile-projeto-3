@@ -5,9 +5,9 @@ class Produto {
   int qtdVendida = 0;
 
   Produto(this.nome, this.valor, this.qtdEmEstoque);
-  
+
 //Criação do método verReceitaGerada - guilhermeMiranda
-  verReceitaGerada(){
+  verReceitaGerada() {
     return valor * qtdVendida;
   }
 
