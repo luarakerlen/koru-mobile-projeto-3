@@ -12,7 +12,7 @@ class Produto {
       qtdEmEstoque--;
       print('Compra de um produto $nome realizada com sucesso!');
     } else {
-      print('No momento não possuimos o produto $nome em estoque.');
+      throw 'No momento não possuímos o produto $nome em estoque.';
     }
   }
 
