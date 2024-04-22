@@ -60,7 +60,7 @@ class Revendedor extends Pessoa {
 
   //Criação método verResumo
   void verResumo(){
-    print("O total vendido por $nome foi R\$ ${totalVendido.toStringAsFixed(2)} e a média aritmética de valor dos produtos vendidos é R\$ ${mediaProdutosVendidos.toStringAsFixed(2)}. O lucro recebido foi de R\$ ${lucroTotal.toStringAsFixed(2)}.")
+    print("O total vendido por $nome foi R\$ ${calcularTotalVendido().toStringAsFixed(2)} e a média aritmética de valor dos produtos vendidos é R\$ ${calcularMediaProdutosVendidos().toStringAsFixed(2)}. O lucro recebido foi de R\$ ${calcularLucroTotal().toStringAsFixed(2)}.")
   }
 
   
