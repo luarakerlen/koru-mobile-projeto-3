@@ -57,4 +57,11 @@ class Revendedor extends Pessoa {
     });
     return lucroTotal;
   }
+
+  //Criação método verResumo
+  void verResumo(){
+    print("O total vendido por $nome foi R\$ ${calcularTotalVendido().toStringAsFixed(2)} e a média aritmética de valor dos produtos vendidos é R\$ ${calcularMediaProdutosVendidos().toStringAsFixed(2)}. O lucro recebido foi de R\$ ${calcularLucroTotal().toStringAsFixed(2)}.")
+  }
+
+  
 }
