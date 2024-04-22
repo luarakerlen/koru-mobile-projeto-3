@@ -55,13 +55,14 @@ void _ordenarProdutosComprados() {
     return totalGasto;
   }
   
-    double calcularMediaProdutosComprados() {
+   double calcularMediaProdutosComprados() {
     double mediaProdutosComprados = 0;
     if (produtosComprados.length > 0) {
       mediaProdutosComprados = calcularTotalGasto() / produtosComprados.length;
     }
     return mediaProdutosComprados;  
   }
+
 
 //Criação de método verProdutosComprados
   void verProdutosComprados(){
