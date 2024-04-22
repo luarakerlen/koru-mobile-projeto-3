@@ -70,4 +70,10 @@ void _ordenarProdutosComprados() {
     print("Produtos comprados por $nome em ordem alfabética:");
     produtosComprados.forEach((produto)=> print(" - ${produto.nome} - R\$ ${produto.valor.toStringAsFixed(2)}"));
   }
+
+//Criação do metodo Ver Resumo
+  void verResumo(){
+    print("O total gasto por $nome foi R\$ ${calcularTotalGasto().toStringAsFixed(2)} e a média de valor dos produtos comprados é R\$ ${calcularMediaProdutosComprados().toStringAsFixed(2)}.")
+  }
+  
 }

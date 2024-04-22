@@ -173,4 +173,12 @@ main() {
   revendedorC.verResumo();
   revendedorD.verResumo();
   pularLinha();
+
+//Teste do método verResumo Cliente
+  cliente1.verResumo();
+  cliente2.verResumo();
+  cliente3.verResumo();
+  cliente4.verResumo();
+  pularLinha();
+  
 }
