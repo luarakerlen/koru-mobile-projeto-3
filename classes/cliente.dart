@@ -46,6 +46,23 @@ void _ordenarProdutosComprados() {
   produtosComprados.sort((a, b) => a.nome.compareTo(b.nome));
 }
 
+//Criação de método calcularTotalGasto
+  double calcularTotalGasto() {
+    double totalGasto = 0;
+    for (var item in produtosComprados) {
+      totalGasto += item.valor;
+    }
+    return totalGasto;
+  }
+  
+    double calcularMediaProdutosComprados() {
+    double mediaProdutosComprados = 0;
+    if (produtosComprados.length > 0) {
+      mediaProdutosComprados = calcularTotalGasto() / produtosComprados.length;
+    }
+    return mediaProdutosComprados;  
+  }
+
 //Criação de método verProdutosComprados
   void verProdutosComprados(){
     _ordenarProdutosComprados();
