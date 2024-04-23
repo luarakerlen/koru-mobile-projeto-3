@@ -196,7 +196,18 @@ main() {
   print("*//"*30);
 // fim do teste
 
+//Teste do método verResumo Revendedor
+  revendedorA.verResumo();
+  revendedorB.verResumo();
+  revendedorC.verResumo();
+  revendedorD.verResumo();
+  pularLinha();
 
+//Teste do método verResumo Cliente
+  cliente1.verResumo();
+  cliente2.verResumo();
+  cliente3.verResumo();
+  cliente4.verResumo();
+  pularLinha();
+  
 }
-
-
