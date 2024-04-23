@@ -11,7 +11,7 @@ class Cliente extends Pessoa {
 
 //Criação do método Adicionar Dinheiro
   void adicionarDinheiro(double valor) {
-    if (valor > 0) {
+    if (valor > 0.0) {
       dinheiro = dinheiro + valor;
       print("$nome agora possui R\$ ${dinheiro.toStringAsFixed(2)}.");
     }

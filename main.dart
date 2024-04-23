@@ -176,6 +176,9 @@ main() {
    });
 
     pularLinha();
+
+    cliente1.adicionarDinheiro(37.50);
+
     print("A lista de produtos vendidos de ${revendedorA.nome} é: ");
     revendedorA.produtosVendidos.forEach((element) {
       print(element.nome);
@@ -194,7 +197,6 @@ main() {
    print("*//"*30);
   cliente3.verProdutosComprados();
   print("*//"*30);
-// fim do teste
 
 //Teste do método verResumo Revendedor
   revendedorA.verResumo();
@@ -210,4 +212,6 @@ main() {
   cliente4.verResumo();
   pularLinha();
   
+// fim do teste
 }
+
