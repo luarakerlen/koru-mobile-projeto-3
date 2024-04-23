@@ -30,14 +30,18 @@ class Cliente extends Pessoa {
 
 //Criação do método comprarProduto()
   void comprarProduto(Produto produto, Revendedor revendedor) {
-    if (saldoInsuficiente(dinheiro, produto)) {
-      print("$nome não possui dinheiro suficiente para efetuar a compra de ${produto.nome}");
-      return;
-    } else {
-      revendedor.venderProduto(produto);
-      produtosComprados.add(produto);
-      dinheiro -= produto.valor;
-      print("O saldo atual de $nome é R\$ ${dinheiro.toStringAsFixed(2)}.");
+    try{
+      if (saldoInsuficiente(dinheiro, produto)) {
+        print("$nome não possui dinheiro suficiente para efetuar a compra de ${produto.nome}");
+        return;
+      }else{
+        revendedor.venderProduto(produto);
+        produtosComprados.add(produto);
+        dinheiro -= produto.valor;
+        print("O saldo atual de $nome é R\$ ${dinheiro.toStringAsFixed(2)}.");
+      }
+    } catch (e){
+      throw(e);
     }
   }
 
@@ -73,7 +77,7 @@ void _ordenarProdutosComprados() {
 
 //Criação do metodo Ver Resumo
   void verResumo(){
-    print("O total gasto por $nome foi R\$ ${calcularTotalGasto().toStringAsFixed(2)} e a média de valor dos produtos comprados é R\$ ${calcularMediaProdutosComprados().toStringAsFixed(2)}.")
+    print("O total gasto por $nome foi R\$ ${calcularTotalGasto().toStringAsFixed(2)} e a média de valor dos produtos comprados é R\$ ${calcularMediaProdutosComprados().toStringAsFixed(2)}.");
   }
   
 }

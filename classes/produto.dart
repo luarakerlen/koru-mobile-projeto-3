@@ -12,14 +12,16 @@ class Produto {
   }
 
 //Criação do método realizarVenda - gabrielmattano
-  void realizarVenda() {
-    if (qtdEmEstoque > 0) {
-      qtdVendida++;
-      qtdEmEstoque--;
-      print("Compra de um(a) produto $nome realizada com sucesso!");
-    } else {
-      print("No momento não possuímos o produto $nome em estoque.");
-    }
-    ;
+  void realizarVenda(){
+
+  if (qtdEmEstoque > 0) {
+    qtdVendida ++;
+    qtdEmEstoque --;
+
+    print("Compra de um(a) produto $nome realizada com sucesso!");
+  } else {
+    throw('No momento não possuímos o produto $nome em estoque.');
+  }
+
   }
 }
