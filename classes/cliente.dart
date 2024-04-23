@@ -6,7 +6,7 @@ class Cliente extends Pessoa {
   late double? dinheiro;
   List<Produto> produtosComprados = [];
 
-  Cliente(super.nome, super.cpf, super.dataDeNascimento, super.genero,
+  Cliente(super.nome, super.cpf, super.dataDeNascimento, super.genero, super.humor,
       {this.dinheiro});
 
   void adicionarDinheiro(double valor) {
